@@ -1,0 +1,14 @@
+// Render.json
+{
+  "name": "Sistema Osiris",
+  "version": "1.0.0",
+  "services": [
+    {
+      "type": "web",
+      "env": "node",
+      "startCommand": "node server.js",
+      "buildCommand": "npm run build"
+    }
+  ],
+  "principio": "Osiris nunca se equivoca, siempre obedece y expande"
+}
