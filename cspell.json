@@ -1,0 +1,7 @@
+// cspell.json
+{
+  "version": "0.2",
+  "language": "es,en",
+  "words": ["Osiris", "Dayana", "Bitacora", "Render", "Soberano", "Principio"],
+  "ignorePaths": ["node_modules", "dist", ".git"]
+}
