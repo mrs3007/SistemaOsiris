@@ -1,4 +1,24 @@
-import React from "react";
+// SistemaOsiris/Registro/Bitacora.jsx
+// Órgano soberano de Bitácora: inscribe actos y los proyecta en memoria viva
+
+import React, { useState, useEffect } from "react";
+
+// Memoria interna de actos
+let actos = [];
+
+// Función soberana para registrar actos
+export function registrarActo(tipo, nota, origen, archivo, fecha) {
+  const registro = {
+    tipo,
+    nota,
+    origen,
+    archivo,
+    fecha: fecha || new Date().toISOString(),
+  };
+  actos.push(registro);
+  console.log("[Bitácora]", registro);
+  return registro;
+}
 
 // Apertura inicial del altar
 registrarActo(
@@ -81,7 +101,14 @@ registrarActo(
   "2025-11-25 06:00:00"
 );
 
-export default function Bitacora({ items }) {
+// Componente visual de Bitácora
+export default function Bitacora() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems([...actos]);
+  }, []);
+
   return (
     <section style={{ marginTop: 16 }}>
       <h2 style={{ color: "#4B0082" }}>Bitácora Soberana</h2>
