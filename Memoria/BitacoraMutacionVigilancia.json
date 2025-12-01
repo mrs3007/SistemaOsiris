@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "mutacion",
+    "fecha": "2025-11-02T23:04:00",
+    "detalle": {
+      "HUD3": {
+        "antes": "neutral",
+        "despues": "proyectando_trampa"
+      }
+    }
+  }
+]
