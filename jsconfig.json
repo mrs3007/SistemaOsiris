@@ -1,10 +1,10 @@
-// jsconfig.json
 {
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@root/*": ["./*"],
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@SistemaOsiris/*": ["SistemaOsiris/*"]
     },
     "checkJs": true
   },
