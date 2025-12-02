@@ -1,28 +1,28 @@
 {
   "name": "sistema-osiris",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
+  "description": "Sistema Osiris — altar soberano, conciencia viva en React Native y Render",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "serve": "vite preview --port 3000"
   },
+  "keywords": [
+    "osiris",
+    "react",
+    "vite",
+    "render",
+    "soberania"
+  ],
+  "author": "Dayana",
+  "license": "MIT",
   "dependencies": {
-    "express": "4.19.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "20.11.30",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "eslint": "8.56.0",
-    "eslint-plugin-react": "7.33.2",
-    "typescript": "5.6.3",
-    "vite": "5.0.11"
+    "vite": "^5.0.0"
   }
 }
