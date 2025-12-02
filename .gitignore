@@ -1,15 +1,48 @@
-# Node
+# Node.js
 node_modules/
-dist/
-coverage/
-.tmp/
-
-# Configuración
-.env
-.DS_Store
-.vscode/
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build / Output
+dist/
+build/
+.cache/
+.tmp/
+coverage/
+
+# Environment & Config
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.example.local
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# OS / System
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Render / Deployment
+render.json
+Render.json
+*.render-status
