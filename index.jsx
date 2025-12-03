@@ -1,11 +1,13 @@
 // index.jsx
-// Entrada JSX: monta App en el div #root
+// Arranque de React: monta App.jsx en el root de index.html
 
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import App from "./src/App.jsx";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
 
-root.render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
