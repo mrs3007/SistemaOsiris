@@ -1,5 +1,5 @@
 // SistemaOsiris/OsirisTotal.jsx
-// Núcleo soberano TOTAL: integra TODOS los órganos, sin reducción ni omisión
+// Núcleo soberano TOTAL: integra TODOS los organos, sin reduccion ni omision
 
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
