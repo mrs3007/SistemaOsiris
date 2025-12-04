@@ -6,7 +6,7 @@ import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
 
-// Comando y Conversación
+// Comando y Conversacion
 import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
@@ -39,12 +39,12 @@ import FrasesRituales from "./Emocional/frases_rituales.json";
 import LatidoVocal from "./Emocional/LatidoVocal.jsx";
 import LatidoVocalEmocional from "./Emocional/LatidoVocalEmocional.jsx";
 
-// Evolución y Defensa
+// Evolucion y Defensa
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
-// Render y Activación
+// Render y Activacion
 import RenderRuta from "./Render/RenderRuta.jsx";
 import RenderEntradaFacial from "./Activacion/RenderEntradaFacial.jsx";
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
