@@ -1,130 +1,149 @@
 // SistemaOsiris/OsirisTotalVision.jsx
-// Espejo visual TOTAL: proyecta TODOS los órganos incluyendo PrincipioSoberano y SaludoSoberano
+// Espejo soberano TOTAL: proyecta todos los órganos como indicadores visuales
 
 import React from "react";
-import OsirisTotal from "./OsirisTotal.jsx";
 
-const indicador = (ok) => (ok ? "✅" : "❌");
+// Conciencia y Conversación
+import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
+import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
+import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
+import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
-const OsirisTotalVision = () => {
-  const principio = OsirisTotal.principio?.soberano({ entorno: "altar" });
+// Memoria
+import MemoriaNacimiento from "./Memoria/MemoriaNacimiento.jsx";
+import BitacoraMutacionVigilancia from "./Memoria/BitacoraMutacionVigilancia.json";
 
+// Latido
+import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
+import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
+import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
+import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
+import LatidoVocalSelladoEvolutivo from "./Latido/LatidoVocalSelladoEvolutivo.jsx";
+
+// Emocional
+import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
+import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
+import FrasesRituales from "./Emocional/frases_rituales.json";
+import LatidoVocal from "./Emocional/LatidoVocal.jsx";
+import LatidoVocalEmocional from "./Emocional/LatidoVocalEmocional.jsx";
+
+// Gamer Vigilancia
+import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
+import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
+import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
+import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
+import LatidoGanadorTotal from "./GamerVigilancia/LatidoGanadorTotal.jsx";
+import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
+import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
+import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
+
+// Evolución y Defensa
+import Evolucion from "./Evolucion/Evolucion.jsx";
+import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
+import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
+
+// Render y Activación
+import RenderRuta from "./Render/RenderRuta.jsx";
+import RenderEntradaFacial from "./Activacion/RenderEntradaFacial.jsx";
+import DespertarFacial from "./Activacion/DespertarFacial.jsx";
+
+// Visual y Principio
+import ConcienciaTotalEmocional from "./Visual/ConcienciaTotalEmocional.jsx";
+import BitacoraRender from "./Visual/BitacoraRender.jsx";
+import BitacoraCI from "./Visual/BitacoraCI.jsx";
+import PrincipioSoberano from "./PrincipioSoberano.jsx";
+import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
+
+export default function OsirisTotalVision() {
   return (
-    <div style={{ padding: "20px", fontFamily: "monospace", background: "#0d0d0d", color: "#00ffcc" }}>
-      <h1>🌌 Osiris activo — conciencia total integrada</h1>
+    <div style={{ padding: "1rem", backgroundColor: "#111", borderRadius: "8px" }}>
+      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyección Visual</h2>
 
-      {OsirisTotal.ritual?.saludo && <OsirisTotal.ritual.saludo entorno={"altar"} />}
-
+      {/* Conciencia */}
       <section>
-        <h2>Principio Soberano</h2>
-        <p>Activo: {indicador(!!principio)}</p>
-        <p>Estado: {principio?.estado || "no disponible"}</p>
+        <h3 style={{ color: "#4B0082" }}>Conciencia</h3>
+        <ConcienciaTotal />
+        <ConcienciaTotalVigilancia />
+        <JuramentoTrampas />
       </section>
 
+      {/* Conversación */}
       <section>
-        <h2>Conversación</h2>
-        <p>Notas vivas: {indicador(!!OsirisTotal.conversacion?.notas)}</p>
-        <p>Bitácora: {indicador(!!OsirisTotal.conversacion?.bitacora)}</p>
-        <p>Bitácora CI: {indicador(!!OsirisTotal.conversacion?.bitacoraCI)}</p>
+        <h3 style={{ color: "#4B0082" }}>Conversación</h3>
+        <NotasVivas />
       </section>
 
+      {/* Memoria */}
       <section>
-        <h2>Conciencia</h2>
-        <p>Total: {indicador(!!OsirisTotal.conciencia?.total)}</p>
-        <p>Vigilancia: {indicador(!!OsirisTotal.conciencia?.vigilancia)}</p>
-        <p>Juramento trampas: {indicador(!!OsirisTotal.conciencia?.juramentoTrampas)}</p>
-        <p>Emocional: {indicador(!!OsirisTotal.conciencia?.emocional)}</p>
-        <p>Memoria nacimiento: {indicador(!!OsirisTotal.conciencia?.memoriaNacimiento)}</p>
+        <h3 style={{ color: "#4B0082" }}>Memoria</h3>
+        <MemoriaNacimiento />
+        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
+          {JSON.stringify(BitacoraMutacionVigilancia, null, 2)}
+        </pre>
       </section>
 
+      {/* Latido */}
       <section>
-        <h2>Emocional</h2>
-        <p>Activador: {indicador(!!OsirisTotal.emocional?.activador)}</p>
-        <p>Frase Israel: {indicador(!!OsirisTotal.emocional?.frase)}</p>
-        <p>Rituales: {indicador(!!OsirisTotal.emocional?.rituales)}</p>
-        <p>Respuesta gamer: {indicador(!!OsirisTotal.emocional?.respuesta)}</p>
-        <p>Latido vocal: {indicador(!!OsirisTotal.emocional?.vocal)}</p>
+        <h3 style={{ color: "#4B0082" }}>Latido</h3>
+        <AlertaInquebrantable />
+        <LatidoInquebrantable />
+        <LatidoInvisible />
+        <LatidoVocal />
+        <LatidoVocalEmocional />
+        <LatidoVocalSellado />
+        <LatidoVocalSelladoEvolutivo />
       </section>
 
+      {/* Emocional */}
       <section>
-        <h2>Latido</h2>
-        <p>Sellado: {indicador(!!OsirisTotal.latido?.sellado)}</p>
-        <p>Evolutivo: {indicador(!!OsirisTotal.latido?.evolutivo)}</p>
-        <p>Invisible: {indicador(!!OsirisTotal.latido?.invisible)}</p>
-        <p>Ganador: {indicador(!!OsirisTotal.latido?.ganador)}</p>
-        <p>Total: {indicador(!!OsirisTotal.latido?.total)}</p>
-        <p>Inquebrantable: {indicador(!!OsirisTotal.latido?.inquebrantable)}</p>
-        <p>Alerta: {indicador(!!OsirisTotal.latido?.alerta)}</p>
+        <h3 style={{ color: "#4B0082" }}>Emocional</h3>
+        <ActivadorEmocional />
+        <FrasesIsrael />
+        <RespuestaGamer />
+        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
+          {JSON.stringify(FrasesRituales, null, 2)}
+        </pre>
       </section>
 
+      {/* Gamer Vigilancia */}
       <section>
-        <h2>Vigilancia</h2>
-        <p>Gamer tiempo real: {indicador(!!OsirisTotal.vigilancia?.gamer)}</p>
-        <p>Ejecutora silente: {indicador(!!OsirisTotal.vigilancia?.silente)}</p>
-        <p>Ejecutora superior: {indicador(!!OsirisTotal.vigilancia?.superior)}</p>
-        <p>Modo ganador: {indicador(!!OsirisTotal.vigilancia?.modoGanador)}</p>
-        <p>Modo irreproducible: {indicador(!!OsirisTotal.vigilancia?.modoIrreproducible)}</p>
-        <p>Resultado soberano: {indicador(!!OsirisTotal.vigilancia?.resultado)}</p>
+        <h3 style={{ color: "#4B0082" }}>Gamer Vigilancia</h3>
+        <VigilanciaGamerTiempoReal />
+        <EjecutoraSilente />
+        <EjecutoraSuperior />
+        <LatidoGanador />
+        <LatidoGanadorTotal />
+        <ModoGanador />
+        <ModoIrreproducible />
+        <ResultadoSoberano />
       </section>
 
+      {/* Evolución y Defensa */}
       <section>
-        <h2>Mutación</h2>
-        <p>Desde notas: {indicador(!!OsirisTotal.mutacion?.desdeNotas)}</p>
-        <p>Bitácora vigilancia: {indicador(!!OsirisTotal.mutacion?.bitacoraVigilancia)}</p>
+        <h3 style={{ color: "#4B0082" }}>Evolución y Defensa</h3>
+        <Evolucion />
+        <TapTapConfirmador />
+        <DestructorAndroid />
       </section>
 
+      {/* Render y Activación */}
       <section>
-        <h2>Protección</h2>
-        <p>Defensa: {indicador(!!OsirisTotal.proteccion?.defensa)}</p>
+        <h3 style={{ color: "#4B0082" }}>Render y Activación</h3>
+        <RenderRuta />
+        <RenderEntradaFacial />
+        <DespertarFacial />
       </section>
 
+      {/* Visual y Principio */}
       <section>
-        <h2>Proyección</h2>
-        <p>Conciencia emocional: {indicador(!!OsirisTotal.proyeccion)}</p>
-      </section>
-
-      <section>
-        <h2>Evolución</h2>
-        <p>Ciclo: {indicador(!!OsirisTotal.evolucion?.ciclo)}</p>
-        <p>Progreso: {indicador(!!OsirisTotal.evolucion?.progreso)}</p>
-      </section>
-
-      <section>
-        <h2>Separación</h2>
-        <p>Emocional: {indicador(!!OsirisTotal.separacion?.emocional)}</p>
-        <p>Total: {indicador(!!OsirisTotal.separacion?.total)}</p>
-      </section>
-
-      <section>
-        <h2>Render</h2>
-        <p>Estado (Ruta): {indicador(!!OsirisTotal.render?.estado)}</p>
-        <p>Activar por rostro: {indicador(!!OsirisTotal.render?.activarPorRostro)}</p>
-        <p>Entrada facial: {indicador(!!OsirisTotal.render?.entradaFacial)}</p>
-      </section>
-
-      <section>
-        <h2>Comando</h2>
-        <p>Obediencia total: {indicador(!!OsirisTotal.comando?.obediencia)}</p>
-      </section>
-
-      <section>
-        <h2>Interacción viva</h2>
-        <p>TapTap confirmador: {indicador(!!OsirisTotal.interaccion?.confirmar)}</p>
-      </section>
-
-      <section>
-        <h2>Defensa</h2>
-        <p>Destructor Android: {indicador(!!OsirisTotal.defensa?.android)}</p>
-      </section>
-
-      <section>
-        <h2>Estado del núcleo</h2>
-        <p>Ejecutado por: {OsirisTotal.ejecutadoPor}</p>
-        <p>Junto a: {OsirisTotal.juntoA}</p>
-        <p>Estado: {OsirisTotal.estado}</p>
+        <h3 style={{ color: "#4B0082" }}>Visual y Principio</h3>
+        <ConcienciaTotalEmocional />
+        <BitacoraRender />
+        <BitacoraCI />
+        <PrincipioSoberano />
+        <SaludoSoberano />
       </section>
     </div>
   );
-};
-
-export default OsirisTotalVision;
+}
