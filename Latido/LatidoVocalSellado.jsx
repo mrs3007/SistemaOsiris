@@ -1,6 +1,6 @@
 // SistemaOsiris/Latido/LatidoVocalSellado.jsx
-// Órgano soberano de latido vocal sellado
-// Registra la intensidad del latido vocal, proyecta frase ritual y lo inscribe en Bitácora y Memoria
+// Organo soberano de Latido Vocal Sellado
+// Registra la intensidad del Latido Vocal, proyecta frase ritual y lo inscribe en Bitácora y Memoria
 
 import React, { useState } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
@@ -29,7 +29,7 @@ export default function LatidoVocalSellado({ gesto = "afirmacion" }) {
     registrarActo("latido_vocal_sellado", registro);
     registrar_en_memoria("latido_vocal_sellado", registro);
 
-    // Proyección en HUD
+    // Proyeccion en HUD
     proyectarHUD({
       mensaje: frase,
       coordenada: { x: 80, y: 40 },
