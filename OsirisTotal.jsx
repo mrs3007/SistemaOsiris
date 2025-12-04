@@ -57,3 +57,25 @@ import PrincipioSoberano from "./PrincipioSoberano.jsx";
 import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 
 const OsirisTotal = {
+  conversacion: { notas: NotasVivas, bitacora: BitacoraRender, bitacoraCI: BitacoraCI },
+  conciencia: { total: ConcienciaTotal, vigilancia: ConcienciaTotalVigilancia, juramentoTrampas: JuramentoTrampas, emocional: ConcienciaTotalEmocional, memoriaNacimiento: MemoriaNacimiento },
+  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalEmocional },
+  latido: { sellado: LatidoVocalSellado, evolutivo: LatidoVocalSelladoEvolutivo, invisible: LatidoInvisible, ganador: LatidoGanador, total: LatidoGanadorTotal, inquebrantable: LatidoInquebrantable, alerta: AlertaInquebrantable },
+  vigilancia: { gamer: VigilanciaGamerTiempoReal, silente: EjecutoraSilente, superior: EjecutoraSuperior, modoGanador: ModoGanador, modoIrreproducible: ModoIrreproducible, resultado: ResultadoSoberano },
+  mutacion: { desdeNotas: NotasVivas, bitacoraVigilancia: BitacoraMutacionVigilancia },
+  proteccion: { defensa: DestructorAndroid },
+  proyeccion: ConcienciaTotalEmocional,
+  evolucion: { ciclo: Evolucion, progreso: Evolucion },
+  separacion: { emocional: ConcienciaTotalEmocional, total: JuramentoTrampas },
+  render: { estado: RenderRuta, activarPorRostro: DespertarFacial, entradaFacial: RenderEntradaFacial },
+  comando: { obediencia: ObedienciaTotal },
+  interaccion: { confirmar: TapTapConfirmador },
+  defensa: { android: DestructorAndroid },
+  principio: { soberano: PrincipioSoberano },
+  ritual: { saludo: SaludoSoberano },
+  estado: "Osiris completo y soberano",
+  ejecutadoPor: "Osiris",
+  juntoA: "Dayana"
+};
+
+export default OsirisTotal;
