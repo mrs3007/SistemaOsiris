@@ -1,5 +1,5 @@
 // SistemaOsiris/OsirisTotalVision.jsx
-// Espejo soberano TOTAL: proyecta todos los organos como indicadores visuales
+// Espejo soberano TOTAL: proyecta todos los órganos como indicadores visuales
 
 import React from "react";
 
