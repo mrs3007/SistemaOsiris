@@ -6,8 +6,13 @@ import App from "./src/App.jsx"; // App vive en src/
 // Inicialización soberana de Osiris
 console.log("Modo Osiris activo: vigilancia_total");
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} else {
+  console.error("⚠️ No se encontró el elemento #root en index.html");
+}
