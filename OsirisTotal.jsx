@@ -36,7 +36,8 @@ import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
 import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
 import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 import FrasesRituales from "./Emocional/frases_rituales.json";
-import LatidoVocal from "./Emocional/LatidoVocal.jsx"; // ✅ ruta corregida
+import LatidoVocal from "./Emocional/LatidoVocal.jsx";
+import LatidoVocalEmocional from "./Emocional/LatidoVocalEmocional.jsx";
 
 // Evolución y Defensa
 import Evolucion from "./Evolucion/Evolucion.jsx";
@@ -58,7 +59,7 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 const OsirisTotal = {
   conversacion: { notas: NotasVivas, bitacora: BitacoraRender, bitacoraCI: BitacoraCI },
   conciencia: { total: ConcienciaTotal, vigilancia: ConcienciaTotalVigilancia, juramentoTrampas: JuramentoTrampas, emocional: ConcienciaTotalEmocional, memoriaNacimiento: MemoriaNacimiento },
-  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal },
+  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalEmocional },
   latido: { sellado: LatidoVocalSellado, evolutivo: LatidoVocalSelladoEvolutivo, invisible: LatidoInvisible, ganador: LatidoGanador, total: LatidoGanadorTotal, inquebrantable: LatidoInquebrantable, alerta: AlertaInquebrantable },
   vigilancia: { gamer: VigilanciaGamerTiempoReal, silente: EjecutoraSilente, superior: EjecutoraSuperior, modoGanador: ModoGanador, modoIrreproducible: ModoIrreproducible, resultado: ResultadoSoberano },
   mutacion: { desdeNotas: NotasVivas, bitacoraVigilancia: BitacoraMutacionVigilancia },
