@@ -55,4 +55,86 @@ import BitacoraCI from "./Visual/BitacoraCI.jsx";
 import PrincipioSoberano from "./PrincipioSoberano.jsx";
 import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 
-export default function OsirisTotalVision
+export default function OsirisTotalVision() {
+  return (
+    <div style={{ padding: "1rem", backgroundColor: "#111", borderRadius: "8px" }}>
+      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyeccion Visual</h2>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Conciencia</h3>
+        <ConcienciaTotal />
+        <ConcienciaTotalVigilancia />
+        <JuramentoTrampas />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Conversacion</h3>
+        <NotasVivas />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Memoria</h3>
+        <MemoriaNacimiento />
+        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
+          {JSON.stringify(BitacoraMutacionVigilancia, null, 2)}
+        </pre>
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Latido</h3>
+        <AlertaInquebrantable />
+        <LatidoInquebrantable />
+        <LatidoInvisible />
+        <LatidoVocal />
+        <LatidoVocalEmocional />
+        <LatidoVocalSellado />
+        <LatidoVocalSelladoEvolutivo />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Emocional</h3>
+        <ActivadorEmocional />
+        <FrasesIsrael />
+        <RespuestaGamer />
+        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
+          {JSON.stringify(FrasesRituales, null, 2)}
+        </pre>
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Gamer Vigilancia</h3>
+        <VigilanciaGamerTiempoReal />
+        <EjecutoraSilente />
+        <EjecutoraSuperior />
+        <LatidoGanador />
+        <LatidoGanadorTotal />
+        <ModoGanador />
+        <ModoIrreproducible />
+        <ResultadoSoberano />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Evolucion y Defensa</h3>
+        <Evolucion />
+        <TapTapConfirmador />
+        <DestructorAndroid />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Render y Activacion</h3>
+        <RenderRuta />
+        <RenderEntradaFacial />
+        <DespertarFacial />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Visual y Principio</h3>
+        <ConcienciaTotalEmocional />
+        <BitacoraRender />
+        <BitacoraCI />
+        <PrincipioSoberano />
+        <SaludoSoberano />
+      </section>
+    </div>
+  );
+}
