@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from "react";
-import OsirisTotal from "../OsirisTotal.jsx"; // núcleo soberano en la raíz
+import OsirisTotal from "../OsirisTotal.jsx";              // núcleo soberano
+import OsirisTotalVision from "../OsirisTotalVision.jsx";  // espejo visual
 
 export default function App() {
   return (
@@ -14,10 +15,19 @@ export default function App() {
       }}
     >
       {/* Saludo inicial del altar */}
-      <h1 style={{ textAlign: "center" }}>Sistema Osiris</h1>
+      <h1 style={{ textAlign: "center" }}>🌌 Sistema Osiris</h1>
 
       {/* Núcleo soberano: aquí se proyecta Osiris completo */}
-      <OsirisTotal />
+      <section style={{ marginBottom: "2rem" }}>
+        <h2>⚙️ Núcleo Osiris</h2>
+        <OsirisTotal />
+      </section>
+
+      {/* Espejo visual: proyección viva */}
+      <section>
+        <h2>🪞 Proyección Osiris</h2>
+        <OsirisTotalVision />
+      </section>
     </div>
   );
 }
