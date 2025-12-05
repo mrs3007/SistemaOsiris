@@ -1,7 +1,26 @@
 // src/App.jsx
 import React from "react";
-import OsirisTotal from "../OsirisTotal.jsx";              // núcleo soberano
-import OsirisTotalVision from "../OsirisTotalVision.jsx";  // espejo visual
+import OsirisTotal from "../OsirisTotal.jsx";
+import OsirisTotalVision from "../OsirisTotalVision.jsx";
+
+function SafeSection({ title, children }) {
+  try {
+    return (
+      <section style={{ marginBottom: "2rem" }}>
+        <h2>{title}</h2>
+        {children}
+      </section>
+    );
+  } catch (e) {
+    console.error(`⚠️ Falla en sección: ${title}`, e);
+    return (
+      <section style={{ marginBottom: "2rem", color: "#ff4d4f" }}>
+        <h2>{title}</h2>
+        <p>Falla en esta sección. Revisa consola.</p>
+      </section>
+    );
+  }
+}
 
 export default function App() {
   return (
@@ -14,20 +33,15 @@ export default function App() {
         fontFamily: "serif",
       }}
     >
-      {/* Saludo inicial del altar */}
       <h1 style={{ textAlign: "center" }}>🌌 Sistema Osiris</h1>
 
-      {/* Núcleo soberano */}
-      <section style={{ marginBottom: "2rem" }}>
-        <h2>⚙️ Núcleo Osiris</h2>
+      <SafeSection title="⚙️ Núcleo Osiris">
         <OsirisTotal />
-      </section>
+      </SafeSection>
 
-      {/* Espejo visual */}
-      <section>
-        <h2>🪞 Proyección Osiris</h2>
+      <SafeSection title="🪞 Proyección Osiris">
         <OsirisTotalVision />
-      </section>
+      </SafeSection>
     </div>
   );
 }
