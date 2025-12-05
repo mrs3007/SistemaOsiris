@@ -9,6 +9,7 @@ export default defineConfig({
   },
   preview: {
     host: "0.0.0.0",
-    port: process.env.PORT || 5000
+    port: process.env.PORT || 5000,
+    allowedHosts: ["sistemaosiris-4m3y.onrender.com"]
   }
-}); 
+});
