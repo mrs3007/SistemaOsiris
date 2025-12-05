@@ -1,7 +1,7 @@
-// src/main.jsx
+// main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./src/App.jsx"; // App vive en src/
 
 // Inicialización soberana de Osiris
 console.log("Sistema Osiris inicializado: vigilancia_total");
