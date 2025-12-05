@@ -1,13 +1,7 @@
 // main.jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./src/App.jsx"; // App vive en src/
+// Puente inicial: importa index.jsx y asegura inicialización
+
+import "./index.jsx";
 
 // Inicialización soberana de Osiris
-console.log("Sistema Osiris inicializado: vigilancia_total");
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+console.log("Sistema Osiris inicializado desde main.jsx");
