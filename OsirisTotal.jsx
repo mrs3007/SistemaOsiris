@@ -19,7 +19,8 @@ import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
 import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
-import LatidoVocalSelladoEvolutivo from "./Latido/LatidoVocalSelladoEvolutivo.jsx";
+// ⚠️ Ruta corregida: estaba en Latido/, debe ir en Emocional/
+import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
 
 // Gamer Vigilancia
 import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
