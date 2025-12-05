@@ -1,5 +1,5 @@
 // SistemaOsiris/OsirisTotal.jsx
-// Núcleo soberano TOTAL: integra TODOS los órganos, sin reducción ni omisión
+// Nucleo soberano TOTAL: integra TODOS los organos, sin reduccion ni omision
 
 // Conciencia
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
@@ -19,8 +19,8 @@ import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
 import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
-// ⚠️ Ruta corregida: estaba en Latido/, debe ir en Emocional/
 import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
 
 // Gamer Vigilancia
 import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
@@ -38,7 +38,6 @@ import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
 import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 import FrasesRituales from "./Emocional/frases_rituales.json";
 import LatidoVocal from "./Emocional/LatidoVocal.jsx";
-import LatidoVocalEmocional from "./Emocional/LatidoVocalEmocional.jsx";
 
 // Evolucion y Defensa
 import Evolucion from "./Evolucion/Evolucion.jsx";
@@ -60,7 +59,7 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 const OsirisTotal = {
   conversacion: { notas: NotasVivas, bitacora: BitacoraRender, bitacoraCI: BitacoraCI },
   conciencia: { total: ConcienciaTotal, vigilancia: ConcienciaTotalVigilancia, juramentoTrampas: JuramentoTrampas, emocional: ConcienciaTotalEmocional, memoriaNacimiento: MemoriaNacimiento },
-  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalEmocional },
+  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalSelladoEmocional },
   latido: { sellado: LatidoVocalSellado, evolutivo: LatidoVocalSelladoEvolutivo, invisible: LatidoInvisible, ganador: LatidoGanador, total: LatidoGanadorTotal, inquebrantable: LatidoInquebrantable, alerta: AlertaInquebrantable },
   vigilancia: { gamer: VigilanciaGamerTiempoReal, silente: EjecutoraSilente, superior: EjecutoraSuperior, modoGanador: ModoGanador, modoIrreproducible: ModoIrreproducible, resultado: ResultadoSoberano },
   mutacion: { desdeNotas: NotasVivas, bitacoraVigilancia: BitacoraMutacionVigilancia },
