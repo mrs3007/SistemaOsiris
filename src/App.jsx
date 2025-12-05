@@ -17,13 +17,13 @@ export default function App() {
       {/* Saludo inicial del altar */}
       <h1 style={{ textAlign: "center" }}>🌌 Sistema Osiris</h1>
 
-      {/* Núcleo soberano: aquí se proyecta Osiris completo */}
+      {/* Núcleo soberano */}
       <section style={{ marginBottom: "2rem" }}>
         <h2>⚙️ Núcleo Osiris</h2>
         <OsirisTotal />
       </section>
 
-      {/* Espejo visual: proyección viva */}
+      {/* Espejo visual */}
       <section>
         <h2>🪞 Proyección Osiris</h2>
         <OsirisTotalVision />
