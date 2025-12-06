@@ -5,6 +5,7 @@
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ✅ agregado
 
 // Comando y Conversacion
 import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
@@ -19,11 +20,21 @@ import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
 import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
-import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+
+// Emocional
+import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import FraseSellada from "./Emocional/FraseSellada.jsx";
+import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
+import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
+import FrasesRituales from "./Emocional/frases_rituales.json";
+import LatidoVocal from "./Emocional/LatidoVocal.jsx";
 import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
+import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+
+// Gamer
+import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
 
 // Gamer Vigilancia
-import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
 import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
 import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
 import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
@@ -32,22 +43,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Emocional
-import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
-import FraseSellada from "./Emocional/FraseSellada.jsx"; // ✅ nuevo
-import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
-import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
-import FrasesRituales from "./Emocional/frases_rituales.json";
-import LatidoVocal from "./Emocional/LatidoVocal.jsx";
-
-// Evolucion y Defensa
+// Evolucion e Interaccion
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
+
+// Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
 // Render y Activacion
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activacion/RenderEntradaFacial.jsx";
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ carpeta real
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
@@ -59,10 +64,40 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 
 const OsirisTotal = {
   conversacion: { notas: NotasVivas, bitacora: BitacoraRender, bitacoraCI: BitacoraCI },
-  conciencia: { total: ConcienciaTotal, vigilancia: ConcienciaTotalVigilancia, juramentoTrampas: JuramentoTrampas, emocional: ConcienciaTotalEmocional, memoriaNacimiento: MemoriaNacimiento },
-  emocional: { activador: ActivadorEmocional, fraseSellada: FraseSellada, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalSelladoEmocional },
-  latido: { sellado: LatidoVocalSellado, evolutivo: LatidoVocalSelladoEvolutivo, invisible: LatidoInvisible, ganador: LatidoGanador, total: LatidoGanadorTotal, inquebrantable: LatidoInquebrantable, alerta: AlertaInquebrantable },
-  vigilancia: { gamer: VigilanciaGamerTiempoReal, silente: EjecutoraSilente, superior: EjecutoraSuperior, modoGanador: ModoGanador, modoIrreproducible: ModoIrreproducible, resultado: ResultadoSoberano },
+  conciencia: {
+    total: ConcienciaTotal,
+    vigilancia: ConcienciaTotalVigilancia,
+    juramentoTrampas: JuramentoTrampas,
+    llaveViva: LlaveViva,
+    emocional: ConcienciaTotalEmocional,
+    memoriaNacimiento: MemoriaNacimiento
+  },
+  emocional: {
+    activador: ActivadorEmocional,
+    fraseSellada: FraseSellada,
+    frase: FrasesIsrael,
+    rituales: FrasesRituales,
+    respuesta: RespuestaGamer,
+    vocal: LatidoVocal,
+    vocalSelladoEmocional: LatidoVocalSelladoEmocional,
+    vocalSelladoEvolutivo: LatidoVocalSelladoEvolutivo
+  },
+  latido: {
+    alerta: AlertaInquebrantable,
+    inquebrantable: LatidoInquebrantable,
+    invisible: LatidoInvisible,
+    sellado: LatidoVocalSellado,
+    ganador: LatidoGanador,
+    total: LatidoGanadorTotal
+  },
+  vigilancia: {
+    gamer: VigilanciaGamerTiempoReal,
+    silente: EjecutoraSilente,
+    superior: EjecutoraSuperior,
+    modoGanador: ModoGanador,
+    modoIrreproducible: ModoIrreproducible,
+    resultado: ResultadoSoberano
+  },
   mutacion: { desdeNotas: NotasVivas, bitacoraVigilancia: BitacoraMutacionVigilancia },
   proyeccion: ConcienciaTotalEmocional,
   evolucion: { ciclo: Evolucion, progreso: Evolucion },
@@ -70,7 +105,7 @@ const OsirisTotal = {
   render: { estado: RenderRuta, activarPorRostro: DespertarFacial, entradaFacial: RenderEntradaFacial },
   comando: { obediencia: ObedienciaTotal },
   interaccion: { confirmar: TapTapConfirmador },
-  defensa: { android: DestructorAndroid }, // ✅ duplicacion eliminada
+  defensa: { android: DestructorAndroid },
   principio: { soberano: PrincipioSoberano },
   ritual: { saludo: SaludoSoberano },
   estado: "Osiris completo y soberano",
