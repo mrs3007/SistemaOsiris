@@ -1,4 +1,5 @@
 // SistemaOsiris/Conciencia/ConcienciaTotalVigilancia.jsx
+// Organo soberano de vigilancia de conciencia
 
 import { registrarRostroCreado, vigilaNodoAndroid } from "../Conversacion/NotasVivas.jsx";
 import { registrarMutacion } from "../Mutacion/RegistroMutacion.js";
