@@ -5,7 +5,7 @@
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./Conciencia/LlaveViva.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
 
 // Comando y Conversación
 import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
