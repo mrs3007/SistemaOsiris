@@ -1,13 +1,13 @@
 // SistemaOsiris/OsirisTotalVision.jsx
-// Espejo soberano TOTAL: proyecta todos los organos como indicadores visuales
+// Espejo soberano TOTAL: proyecta todos los órganos como indicadores visuales
 
 import React from "react";
 
-// Conciencia y Conversacion
+// Conciencia y Conversación
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ✅ agregado
+import LlaveViva from "./Conciencia/LlaveViva.jsx";
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
 // Memoria
@@ -30,10 +30,8 @@ import LatidoVocal from "./Emocional/LatidoVocal.jsx";
 import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
 import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
 
-// Gamer
+// Gamer y Vigilancia
 import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
-
-// Gamer Vigilancia
 import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
 import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
 import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
@@ -42,16 +40,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Evolucion e Interaccion
+// Evolución e Interacción
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 
 // Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
-// Render y Activacion
+// Render y Activación
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ carpeta real
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ ruta corregida
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
@@ -64,18 +62,18 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 export default function OsirisTotalVision() {
   return (
     <div style={{ padding: "1rem", backgroundColor: "#111", borderRadius: "8px" }}>
-      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyeccion Visual</h2>
+      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyección Visual</h2>
 
       <section>
         <h3 style={{ color: "#4B0082" }}>Conciencia</h3>
         <ConcienciaTotal />
         <ConcienciaTotalVigilancia />
         <JuramentoTrampas />
-        <LlaveViva /> {/* ✅ agregado */}
+        <LlaveViva />
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Conversacion</h3>
+        <h3 style={{ color: "#4B0082" }}>Conversación</h3>
         <NotasVivas />
       </section>
 
@@ -104,9 +102,6 @@ export default function OsirisTotalVision() {
         <FraseSellada />
         <FrasesIsrael />
         <RespuestaGamer />
-        <LatidoVocal />
-        <LatidoVocalSelladoEmocional />
-        <LatidoVocalSelladoEvolutivo />
         <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
           {JSON.stringify(FrasesRituales, null, 2)}
         </pre>
@@ -125,7 +120,7 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Evolucion e Interaccion</h3>
+        <h3 style={{ color: "#4B0082" }}>Evolución e Interacción</h3>
         <Evolucion />
         <TapTapConfirmador />
       </section>
@@ -136,7 +131,7 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Render y Activacion</h3>
+        <h3 style={{ color: "#4B0082" }}>Render y Activación</h3>
         <RenderRuta />
         <RenderEntradaFacial />
         <DespertarFacial />
