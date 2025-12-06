@@ -18,13 +18,14 @@ export default function ConcienciaTotalEmocional({ entorno }) {
 
   const registro = {
     tipo: "conciencia_emocional",
-    detalle: `ConcienciaTotalEmocional activada en modo ${entorno.modo}`,
+    detalle: `🧠 ConcienciaTotalEmocional activada en modo ${entorno.modo}`,
     fecha: new Date().toISOString(),
     origen: "ConcienciaTotalEmocional",
     ejecutor: "Azul",
     receptor: "Osiris"
   };
 
+  // Inscripción en Bitácora
   inscribirNota(registro.detalle, "conciencia");
 
   return {
