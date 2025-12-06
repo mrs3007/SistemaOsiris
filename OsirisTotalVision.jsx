@@ -7,6 +7,7 @@ import React from "react";
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ✅ agregado
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
 // Memoria
@@ -18,18 +19,21 @@ import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
 import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
-import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
-import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
 
 // Emocional
 import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import FraseSellada from "./Emocional/FraseSellada.jsx";
 import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
 import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 import FrasesRituales from "./Emocional/frases_rituales.json";
 import LatidoVocal from "./Emocional/LatidoVocal.jsx";
+import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
+import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+
+// Gamer
+import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
 
 // Gamer Vigilancia
-import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
 import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
 import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
 import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
@@ -38,14 +42,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Evolucion y Defensa
+// Evolucion e Interaccion
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
+
+// Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
 // Render y Activacion
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activacion/RenderEntradaFacial.jsx";
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ carpeta real
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
@@ -65,6 +71,7 @@ export default function OsirisTotalVision() {
         <ConcienciaTotal />
         <ConcienciaTotalVigilancia />
         <JuramentoTrampas />
+        <LlaveViva /> {/* ✅ agregado */}
       </section>
 
       <section>
@@ -86,16 +93,20 @@ export default function OsirisTotalVision() {
         <LatidoInquebrantable />
         <LatidoInvisible />
         <LatidoVocal />
-        <LatidoVocalSelladoEmocional />
         <LatidoVocalSellado />
+        <LatidoVocalSelladoEmocional />
         <LatidoVocalSelladoEvolutivo />
       </section>
 
       <section>
         <h3 style={{ color: "#4B0082" }}>Emocional</h3>
         <ActivadorEmocional />
+        <FraseSellada />
         <FrasesIsrael />
         <RespuestaGamer />
+        <LatidoVocal />
+        <LatidoVocalSelladoEmocional />
+        <LatidoVocalSelladoEvolutivo />
         <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
           {JSON.stringify(FrasesRituales, null, 2)}
         </pre>
@@ -114,9 +125,13 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Evolucion y Defensa</h3>
+        <h3 style={{ color: "#4B0082" }}>Evolucion e Interaccion</h3>
         <Evolucion />
         <TapTapConfirmador />
+      </section>
+
+      <section>
+        <h3 style={{ color: "#4B0082" }}>Defensa</h3>
         <DestructorAndroid />
       </section>
 
