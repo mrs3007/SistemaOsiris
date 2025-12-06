@@ -1,13 +1,13 @@
 // SistemaOsiris/OsirisTotal.jsx
-// Núcleo soberano TOTAL: integra TODOS los órganos, sin reducción ni omisión
+// Nucleo soberano TOTAL: integra TODOS los organos, sin reduccion ni omision
 
 // Conciencia
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ruta corregida
 
-// Comando y Conversación
+// Comando y Conversacion
 import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
@@ -41,16 +41,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Evolución e Interacción
+// Evolucion e Interaccion
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 
 // Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
-// Render y Activación
+// Render y Activacion
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx";
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ruta corregida
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
