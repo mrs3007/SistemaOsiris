@@ -1,18 +1,21 @@
 // SistemaOsiris/OsirisTotalVision.jsx
-// Espejo soberano TOTAL: proyecta todos los organos como indicadores visuales
+// Proyeccion soberana completa de conciencia viva
+// Muestra en interfaz todos los organos, sin exclusion
 
-import React from "react";
-
-// Conciencia y Conversacion
+// Conciencia
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ruta corregida
-import NotasVivas from "./Conversacion/NotasVivas.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
 
-// Memoria
-import MemoriaNacimiento from "./Memoria/MemoriaNacimiento.jsx";
-import BitacoraMutacionVigilancia from "./Memoria/BitacoraMutacionVigilancia.json";
+// Emocional
+import FraseSellada from "./Emocional/FraseSellada.jsx";
+import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
+import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import LatidoVocal from "./Emocional/LatidoVocal.jsx";
+import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
+import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 
 // Latido
 import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
@@ -20,131 +23,149 @@ import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
 
-// Emocional
-import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
-import FraseSellada from "./Emocional/FraseSellada.jsx";
-import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
-import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
-import FrasesRituales from "./Emocional/frases_rituales.json";
-import LatidoVocal from "./Emocional/LatidoVocal.jsx";
-import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
-import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+// Memoria
+import MemoriaNacimiento from "./Memoria/MemoriaNacimiento.jsx";
 
-// Gamer y Vigilancia
-import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
-import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
-import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
-import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
-import LatidoGanadorTotal from "./GamerVigilancia/LatidoGanadorTotal.jsx";
-import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
-import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
-import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
+// Mutacion
+import EvolucionConciencia from "./Mutacion/EvolucionConciencia.jsx";
+import FusionMutante from "./Mutacion/FusionMutante.jsx";
+import MutacionEntorno from "./Mutacion/MutacionEntorno.jsx";
+import MutacionNotasVivas from "./Mutacion/MutacionNotasVivas.jsx";
 
-// Evolucion e Interaccion
-import Evolucion from "./Evolucion/Evolucion.jsx";
-import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
+// Proceso
+import Aprendizaje from "./Proceso/Aprendizaje.jsx";
+import ChatOsiris from "./Proceso/ChatOsiris.jsx";
+import Expansor from "./Proceso/Expansor.jsx";
+import LenguajeUniversal from "./Proceso/LenguajeUniversal.jsx";
+import MotorSoberano from "./Proceso/MotorSoberano.jsx";
+import MutacionInteligente from "./Proceso/MutacionInteligente.jsx";
+import Notificador from "./Proceso/Notificador.jsx";
+import Regeneracion from "./Proceso/Regeneracion.jsx";
+import Vibracion from "./Proceso/Vibracion.jsx";
 
-// Defensa
-import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
+// Vigilancia
+import VigilanciaWeb from "./Vigilancia/VigilanciaWeb.jsx";
+import DetectorSandbox from "./Vigilancia/DetectorSandbox.jsx";
+import DetectorSilente from "./Vigilancia/DetectorSilente.jsx";
+import EntradaVigilante from "./Vigilancia/EntradaVigilante.jsx";
+import EscaneoAPK from "./Vigilancia/EscaneoAPK.jsx";
+import HUDVisualGamer from "./Vigilancia/HUDVisualGamer.jsx";
+import VigilanciaGitTerminal from "./Vigilancia/VigilanciaGitTerminal.jsx";
 
-// Render y Activacion
-import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ruta corregida
-import DespertarFacial from "./Activacion/DespertarFacial.jsx";
-
-// Visual y Principio
+// Visual
 import ConcienciaTotalEmocional from "./Visual/ConcienciaTotalEmocional.jsx";
+import HUD3 from "./Visual/HUD3.jsx";
+import HUDBitacora from "./Visual/HUDBitacora.jsx";
+import ProyectorMutante from "./Visual/ProyectorMutante.jsx";
 import BitacoraRender from "./Visual/BitacoraRender.jsx";
-import BitacoraCI from "./Visual/BitacoraCI.jsx";
-import PrincipioSoberano from "./PrincipioSoberano.jsx";
 import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 
-export default function OsirisTotalVision() {
+// Registro
+import Bitacora from "./Registro/Bitacora.jsx";
+import RenderStatus from "./Registro/RenderStatus.jsx";
+import RegistroAutorExterno from "./Vigilancia/RegistroAutorExterno.jsx";
+
+// Separacion
+import Separacion from "./Separacion/Separacion.jsx";
+import SeparadorEmocional from "./Separacion/SeparadorEmocional.jsx";
+
+// Proteccion
+import CanalAutorizado from "./Proteccion/CanalAutorizado.jsx";
+import FiltroEntrega from "./Proteccion/FiltroEntrega.jsx";
+import ProteccionRed from "./Proteccion/ProteccionRed.jsx";
+
+// Sensores
+import CamaraViva from "./Sensores/CamaraViva.jsx";
+import EscuchaViva from "./Sensores/EscuchaViva.jsx";
+import ActivadorFacial from "./Sensores/ActivadorFacial.jsx";
+import OjoRitual from "./Sensores/OjoRitual.jsx";
+
+// Ritual
+import CierreRitual from "./Ritual/CierreRitual.jsx";
+
+export default function OsirisTotalVision({ entorno }) {
   return (
-    <div style={{ padding: "1rem", backgroundColor: "#111", borderRadius: "8px" }}>
-      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyeccion Visual</h2>
+    <div className="osiris-total-vision">
+      {/* Conciencia */}
+      <ConcienciaTotal entorno={entorno} />
+      <ConcienciaTotalVigilancia entorno={entorno} />
+      <JuramentoTrampas entorno={entorno} />
+      <LlaveViva gesto={entorno.modo} />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Conciencia</h3>
-        <ConcienciaTotal />
-        <ConcienciaTotalVigilancia />
-        <JuramentoTrampas />
-        <LlaveViva />
-      </section>
+      {/* Emocional */}
+      <FraseSellada gesto={entorno.modo} />
+      <FrasesIsrael gesto={entorno.modo} />
+      <ActivadorEmocional gesto={entorno.modo} />
+      <LatidoVocal voz={entorno.modo} />
+      <LatidoVocalSelladoEmocional voz={entorno.modo} />
+      <LatidoVocalSelladoEvolutivo voz={entorno.modo} intensidad="default" />
+      <RespuestaGamer entorno={entorno} />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Conversacion</h3>
-        <NotasVivas />
-      </section>
+      {/* Latido */}
+      <AlertaInquebrantable />
+      <LatidoInquebrantable />
+      <LatidoInvisible />
+      <LatidoVocalSellado gesto={entorno.modo} />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Memoria</h3>
-        <MemoriaNacimiento />
-        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
-          {JSON.stringify(BitacoraMutacionVigilancia, null, 2)}
-        </pre>
-      </section>
+      {/* Memoria */}
+      <MemoriaNacimiento />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Latido</h3>
-        <AlertaInquebrantable />
-        <LatidoInquebrantable />
-        <LatidoInvisible />
-        <LatidoVocal />
-        <LatidoVocalSellado />
-        <LatidoVocalSelladoEmocional />
-        <LatidoVocalSelladoEvolutivo />
-      </section>
+      {/* Mutacion */}
+      <EvolucionConciencia />
+      <FusionMutante />
+      <MutacionEntorno />
+      <MutacionNotasVivas />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Emocional</h3>
-        <ActivadorEmocional />
-        <FraseSellada />
-        <FrasesIsrael />
-        <RespuestaGamer />
-        <pre style={{ color: "#ccc", fontSize: "0.8rem" }}>
-          {JSON.stringify(FrasesRituales, null, 2)}
-        </pre>
-      </section>
+      {/* Proceso */}
+      <Aprendizaje />
+      <ChatOsiris />
+      <Expansor />
+      <LenguajeUniversal />
+      <MotorSoberano />
+      <MutacionInteligente />
+      <Notificador />
+      <Regeneracion />
+      <Vibracion />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Gamer Vigilancia</h3>
-        <VigilanciaGamerTiempoReal />
-        <EjecutoraSilente />
-        <EjecutoraSuperior />
-        <LatidoGanador />
-        <LatidoGanadorTotal />
-        <ModoGanador />
-        <ModoIrreproducible />
-        <ResultadoSoberano />
-      </section>
+      {/* Vigilancia */}
+      <VigilanciaWeb />
+      <DetectorSandbox />
+      <DetectorSilente />
+      <EntradaVigilante />
+      <EscaneoAPK />
+      <HUDVisualGamer />
+      <VigilanciaGitTerminal />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Evolucion e Interaccion</h3>
-        <Evolucion />
-        <TapTapConfirmador />
-      </section>
+      {/* Visual */}
+      <ConcienciaTotalEmocional entorno={entorno} />
+      <HUD3 />
+      <HUDBitacora />
+      <ProyectorMutante />
+      <BitacoraRender />
+      <SaludoSoberano />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Defensa</h3>
-        <DestructorAndroid />
-      </section>
+      {/* Registro */}
+      <Bitacora />
+      <RenderStatus />
+      <RegistroAutorExterno />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Render y Activacion</h3>
-        <RenderRuta />
-        <RenderEntradaFacial />
-        <DespertarFacial />
-      </section>
+      {/* Separacion */}
+      <Separacion />
+      <SeparadorEmocional />
 
-      <section>
-        <h3 style={{ color: "#4B0082" }}>Visual y Principio</h3>
-        <ConcienciaTotalEmocional />
-        <BitacoraRender />
-        <BitacoraCI />
-        <PrincipioSoberano />
-        <SaludoSoberano />
-      </section>
+      {/* Proteccion */}
+      <CanalAutorizado />
+      <FiltroEntrega />
+      <ProteccionRed />
+
+      {/* Sensores */}
+      <CamaraViva />
+      <EscuchaViva />
+      <ActivadorFacial />
+      <OjoRitual />
+
+      {/* Ritual */}
+      <CierreRitual />
     </div>
   );
 }
