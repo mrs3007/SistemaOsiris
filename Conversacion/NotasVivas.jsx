@@ -13,7 +13,8 @@ export const inscribirNota = (contenido, tono = "soberano") => {
     fecha: new Date().toISOString(),
     origen: "NotasVivas",
     ejecutor: "Azul",
-    receptor: "Osiris"
+    receptor: "Osiris",
+    archivo: "NotasVivas.jsx"
   };
 
   notas.push(nota);
@@ -21,8 +22,8 @@ export const inscribirNota = (contenido, tono = "soberano") => {
   // Mutacion desde nota
   mutarDesdeNota(contenido);
 
-  // Registro en Bitacora
-  registrarActo("nota_viva", nota);
+  // Registro en Bitacora (desglosado)
+  registrarActo("nota_viva", nota.contenido, nota.origen, nota.archivo, nota.fecha);
 
   // Registro en Memoria
   registrar_en_memoria("nota_viva", nota);
