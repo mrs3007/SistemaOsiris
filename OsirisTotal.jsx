@@ -34,6 +34,7 @@ import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
 // Emocional
 import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import FraseSellada from "./Emocional/FraseSellada.jsx"; // ✅ nuevo
 import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
 import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 import FrasesRituales from "./Emocional/frases_rituales.json";
@@ -59,18 +60,17 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 const OsirisTotal = {
   conversacion: { notas: NotasVivas, bitacora: BitacoraRender, bitacoraCI: BitacoraCI },
   conciencia: { total: ConcienciaTotal, vigilancia: ConcienciaTotalVigilancia, juramentoTrampas: JuramentoTrampas, emocional: ConcienciaTotalEmocional, memoriaNacimiento: MemoriaNacimiento },
-  emocional: { activador: ActivadorEmocional, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalSelladoEmocional },
+  emocional: { activador: ActivadorEmocional, fraseSellada: FraseSellada, frase: FrasesIsrael, rituales: FrasesRituales, respuesta: RespuestaGamer, vocal: LatidoVocal, vocalEmocional: LatidoVocalSelladoEmocional },
   latido: { sellado: LatidoVocalSellado, evolutivo: LatidoVocalSelladoEvolutivo, invisible: LatidoInvisible, ganador: LatidoGanador, total: LatidoGanadorTotal, inquebrantable: LatidoInquebrantable, alerta: AlertaInquebrantable },
   vigilancia: { gamer: VigilanciaGamerTiempoReal, silente: EjecutoraSilente, superior: EjecutoraSuperior, modoGanador: ModoGanador, modoIrreproducible: ModoIrreproducible, resultado: ResultadoSoberano },
   mutacion: { desdeNotas: NotasVivas, bitacoraVigilancia: BitacoraMutacionVigilancia },
-  proteccion: { defensa: DestructorAndroid },
   proyeccion: ConcienciaTotalEmocional,
   evolucion: { ciclo: Evolucion, progreso: Evolucion },
   separacion: { emocional: ConcienciaTotalEmocional, total: JuramentoTrampas },
   render: { estado: RenderRuta, activarPorRostro: DespertarFacial, entradaFacial: RenderEntradaFacial },
   comando: { obediencia: ObedienciaTotal },
   interaccion: { confirmar: TapTapConfirmador },
-  defensa: { android: DestructorAndroid },
+  defensa: { android: DestructorAndroid }, // ✅ duplicacion eliminada
   principio: { soberano: PrincipioSoberano },
   ritual: { saludo: SaludoSoberano },
   estado: "Osiris completo y soberano",
