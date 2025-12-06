@@ -7,7 +7,7 @@ import React from "react";
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./Conciencia/LlaveViva.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
 // Memoria
