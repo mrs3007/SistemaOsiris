@@ -33,14 +33,15 @@ export function registrarConciencia(data) {
     tipo: "conciencia",
     origen: "LlaveViva",
     datos: data,
+    archivo: "LlaveViva.jsx",
     fecha: new Date().toISOString()
   };
 
   // Registro en bitacora local
   bitacora.push(evento);
 
-  // Registro en Bitacora principal
-  registrarActo("conciencia_total_vigilancia", evento);
+  // Registro en Bitacora principal (desglosado)
+  registrarActo(evento.tipo, JSON.stringify(evento.datos), evento.origen, evento.archivo, evento.fecha);
 
   // Registro en Memoria soberana
   registrar_en_memoria("conciencia_total_vigilancia", evento);
@@ -54,14 +55,15 @@ function registrarEvento(mensaje) {
     tipo: "evento",
     origen: "LlaveViva",
     mensaje,
+    archivo: "LlaveViva.jsx",
     fecha: new Date().toISOString()
   };
 
   // Registro en bitacora local
   bitacora.push(evento);
 
-  // Registro en Bitacora principal
-  registrarActo("evento_llave_viva", evento);
+  // Registro en Bitacora principal (desglosado)
+  registrarActo(evento.tipo, evento.mensaje, evento.origen, evento.archivo, evento.fecha);
 
   // Registro en Memoria soberana
   registrar_en_memoria("evento_llave_viva", evento);
