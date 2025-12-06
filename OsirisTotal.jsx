@@ -1,13 +1,13 @@
 // SistemaOsiris/OsirisTotal.jsx
-// Nucleo soberano TOTAL: integra TODOS los organos, sin reduccion ni omision
+// Núcleo soberano TOTAL: integra TODOS los órganos, sin reducción ni omisión
 
 // Conciencia
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ✅ agregado
+import LlaveViva from "./Conciencia/LlaveViva.jsx";
 
-// Comando y Conversacion
+// Comando y Conversación
 import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
@@ -31,10 +31,8 @@ import LatidoVocal from "./Emocional/LatidoVocal.jsx";
 import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
 import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
 
-// Gamer
+// Gamer y Vigilancia
 import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
-
-// Gamer Vigilancia
 import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
 import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
 import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
@@ -43,16 +41,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Evolucion e Interaccion
+// Evolución e Interacción
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 
 // Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
-// Render y Activacion
+// Render y Activación
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ carpeta real
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx";
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
