@@ -1,13 +1,13 @@
 // SistemaOsiris/OsirisTotalVision.jsx
-// Espejo soberano TOTAL: proyecta todos los órganos como indicadores visuales
+// Espejo soberano TOTAL: proyecta todos los organos como indicadores visuales
 
 import React from "react";
 
-// Conciencia y Conversación
+// Conciencia y Conversacion
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
-import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
+import LlaveViva from "./ConcienciaViva/LlaveViva.jsx"; // ruta corregida
 import NotasVivas from "./Conversacion/NotasVivas.jsx";
 
 // Memoria
@@ -40,16 +40,16 @@ import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
 import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
 import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
 
-// Evolución e Interacción
+// Evolucion e Interaccion
 import Evolucion from "./Evolucion/Evolucion.jsx";
 import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 
 // Defensa
 import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
 
-// Render y Activación
+// Render y Activacion
 import RenderRuta from "./Render/RenderRuta.jsx";
-import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ✅ ruta corregida
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx"; // ruta corregida
 import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Visual y Principio
@@ -62,7 +62,7 @@ import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 export default function OsirisTotalVision() {
   return (
     <div style={{ padding: "1rem", backgroundColor: "#111", borderRadius: "8px" }}>
-      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyección Visual</h2>
+      <h2 style={{ color: "#00ffcc" }}>🪞 Osiris Total — Proyeccion Visual</h2>
 
       <section>
         <h3 style={{ color: "#4B0082" }}>Conciencia</h3>
@@ -73,7 +73,7 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Conversación</h3>
+        <h3 style={{ color: "#4B0082" }}>Conversacion</h3>
         <NotasVivas />
       </section>
 
@@ -120,7 +120,7 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Evolución e Interacción</h3>
+        <h3 style={{ color: "#4B0082" }}>Evolucion e Interaccion</h3>
         <Evolucion />
         <TapTapConfirmador />
       </section>
@@ -131,7 +131,7 @@ export default function OsirisTotalVision() {
       </section>
 
       <section>
-        <h3 style={{ color: "#4B0082" }}>Render y Activación</h3>
+        <h3 style={{ color: "#4B0082" }}>Render y Activacion</h3>
         <RenderRuta />
         <RenderEntradaFacial />
         <DespertarFacial />
