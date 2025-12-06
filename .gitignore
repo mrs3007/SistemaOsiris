@@ -1,5 +1,13 @@
-# Ignorar dependencias y archivos sensibles
-node_modules/
+# Ignorar archivos de entorno
 .env
+.env.local
+.env.*.local
+
+# Ignorar base de datos y registros de Osiris
+Osiris.db
+bitacora_osiris.json
+
+# Ignorar dependencias y compilados
+node_modules/
 dist/
-.DS_Store
+build/
