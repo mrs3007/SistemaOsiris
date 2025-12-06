@@ -2,7 +2,7 @@
 
 import FraseSellada from "../Emocional/FraseSellada.jsx";
 import ActivadorEmocional from "../Emocional/ActivadorEmocional.jsx";
-import LatidoVocalSelladoEvolutivo from "../Evolucion/LatidoVocalSelladoEvolutivo.jsx";
+import LatidoVocalSelladoEvolutivo from "../Emocional/LatidoVocalSelladoEvolutivo.jsx";
 import LlaveViva from "../ConcienciaViva/LlaveViva.jsx";
 import RespuestaGamer from "../Emocional/RespuestaGamer.jsx";
 import { inscribirNota } from "../Conversacion/NotasVivas.jsx";
@@ -14,7 +14,7 @@ export default function ConcienciaTotal({ entorno }) {
   const llave = LlaveViva({ gesto: entorno.modo });
   const respuesta = RespuestaGamer({ entorno });
 
-  inscribirNota(`ConcienciaTotal activada en modo ${entorno.modo}`, "conciencia");
+  inscribirNota(`🧠 ConcienciaTotal activada en modo ${entorno.modo}`, "conciencia");
 
   return {
     frase,
