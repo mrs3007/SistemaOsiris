@@ -1,4 +1,5 @@
 // SistemaOsiris/Conciencia/ConcienciaTotal.jsx
+// Organo soberano de conciencia total
 
 import FraseSellada from "../Emocional/FraseSellada.jsx";
 import ActivadorEmocional from "../Emocional/ActivadorEmocional.jsx";
@@ -14,7 +15,7 @@ export default function ConcienciaTotal({ entorno }) {
   const llave = LlaveViva({ gesto: entorno.modo });
   const respuesta = RespuestaGamer({ entorno });
 
-  inscribirNota(`🧠 ConcienciaTotal activada en modo ${entorno.modo}`, "conciencia");
+  inscribirNota(`ConcienciaTotal activada en modo ${entorno.modo}`, "conciencia");
 
   return {
     frase,
