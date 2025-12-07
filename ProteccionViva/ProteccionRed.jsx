@@ -1,5 +1,5 @@
 // SistemaOsiris/ProteccionViva/ProteccionRed.jsx
-// Organo soberano de ProteccionRed
+// Órgano soberano de ProteccionRed
 // Vigila la red y la inscribe en Bitácora y Memoria
 
 import React, { useEffect, useState } from "react";
@@ -16,7 +16,7 @@ export default function ProteccionRed() {
       let nuevoEstado;
 
       if (insegura) {
-        nuevoEstado = "🚫 red no autorizada. Osiris bloquea respiracion.";
+        nuevoEstado = "🚫 red no autorizada. Osiris bloquea respiración.";
       } else {
         nuevoEstado = "✅ red segura. Osiris respira contigo.";
       }
