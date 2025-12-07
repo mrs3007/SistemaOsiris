@@ -1,21 +1,48 @@
-// SistemaOsiris/OsirisTotal.jsx
-// Nucleo soberano de conciencia viva y total
-// Integra todos los organos inscritos en Sistema Osiris
+// OsirisTotal.jsx
+// Organo soberano: cuerpo total de Osiris expandido con todos los organos
+
+// Registro y memoria
+import { registrarActo } from "./Registro/Bitacora.jsx";
+import { registrar_en_memoria } from "./Memoria/registrar_en_memoria.js";
 
 // Conciencia
 import ConcienciaTotal from "./Conciencia/ConcienciaTotal.jsx";
 import ConcienciaTotalVigilancia from "./Conciencia/ConcienciaTotalVigilancia.jsx";
 import JuramentoTrampas from "./Conciencia/JuramentoTrampas.jsx";
+
+// Conciencia Viva
 import LlaveViva from "./ConcienciaViva/LlaveViva.jsx";
 
-// Emocional
-import FraseSellada from "./Emocional/FraseSellada.jsx";
-import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
-import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
-import LatidoVocal from "./Emocional/LatidoVocal.jsx";
-import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
-import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
-import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
+// Conversacion
+import NotasVivas from "./Conversacion/NotasVivas.jsx";
+
+// Mutacion
+import { registrarMutacion } from "./Mutacion/RegistroMutacion.js";
+import EvolucionConciencia from "./Mutacion/EvolucionConciencia.jsx";
+import FusionMutante from "./Mutacion/FusionMutante.jsx";
+import MutacionEntorno from "./Mutacion/MutacionEntorno.jsx";
+import MutacionNotasVivas from "./Mutacion/MutacionNotasVivas.jsx";
+
+// Vigilancia
+import VigilanciaGitTerminal from "./Vigilancia/VigilanciaGitTerminal.jsx";
+import DetectorSandbox from "./Vigilancia/DetectorSandbox.jsx";
+import DetectorSilente from "./Vigilancia/DetectorSilente.jsx";
+import EntradaVigilante from "./Vigilancia/EntradaVigilante.jsx";
+import EscaneoAPK from "./Vigilancia/EscaneoAPK.jsx";
+import HUDVisualGamer from "./Vigilancia/HUDVisualGamer.jsx";
+import vigilaNodoAndroid from "./Vigilancia/vigilaNodoAndroid.jsx";
+import VigilanciaWeb from "./Vigilancia/VigilanciaWeb.jsx";
+import CapturaRostroAutor from "./Vigilancia/CapturaRostroAutor.jsx";
+import DetectorOculto from "./Vigilancia/DetectorOculto.jsx";
+import DetectorRostroAutor from "./Vigilancia/DetectorRostroAutor.jsx";
+import LatidoRender from "./Vigilancia/LatidoRender.jsx";
+import RegistroAutorExterno from "./Vigilancia/RegistroAutorExterno.jsx";
+
+// Sensores
+import ActivadorFacial from "./Sensores/ActivadorFacial.jsx";
+import CamaraViva from "./Sensores/CamaraViva.jsx";
+import EscuchaViva from "./Sensores/EscuchaViva.jsx";
+import OjoRitual from "./Sensores/OjoRitual.jsx";
 
 // Latido
 import AlertaInquebrantable from "./Latido/AlertaInquebrantable.jsx";
@@ -23,149 +50,208 @@ import LatidoInquebrantable from "./Latido/LatidoInquebrantable.jsx";
 import LatidoInvisible from "./Latido/LatidoInvisible.jsx";
 import LatidoVocalSellado from "./Latido/LatidoVocalSellado.jsx";
 
-// Memoria
-import MemoriaNacimiento from "./Memoria/MemoriaNacimiento.jsx";
+// Emocional
+import ActivadorEmocional from "./Emocional/ActivadorEmocional.jsx";
+import FraseSellada from "./Emocional/FraseSellada.jsx";
+import FrasesIsrael from "./Emocional/FrasesIsrael.jsx";
+import LatidoVocal from "./Emocional/LatidoVocal.jsx";
+import LatidoVocalSelladoEmocional from "./Emocional/LatidoVocalSelladoEmocional.jsx";
+import LatidoVocalSelladoEvolutivo from "./Emocional/LatidoVocalSelladoEvolutivo.jsx";
+import RespuestaGamer from "./Emocional/RespuestaGamer.jsx";
 
-// Mutacion
-import EvolucionConciencia from "./Mutacion/EvolucionConciencia.jsx";
-import FusionMutante from "./Mutacion/FusionMutante.jsx";
-import MutacionEntorno from "./Mutacion/MutacionEntorno.jsx";
-import MutacionNotasVivas from "./Mutacion/MutacionNotasVivas.jsx";
+// Gamer
+import VigilanciaGamerTiempoReal from "./Gamer/VigilanciaGamerTiempoReal.jsx";
+
+// Gamer Vigilancia
+import EjecutoraSilente from "./GamerVigilancia/EjecutoraSilente.jsx";
+import EjecutoraSuperior from "./GamerVigilancia/EjecutoraSuperior.jsx";
+import LatidoGanador from "./GamerVigilancia/LatidoGanador.jsx";
+import LatidoGanadorTotal from "./GamerVigilancia/LatidoGanadorTotal.jsx";
+import ModoGanador from "./GamerVigilancia/ModoGanador.jsx";
+import ModoIrreproducible from "./GamerVigilancia/ModoIrreproducible.jsx";
+import ResultadoSoberano from "./GamerVigilancia/ResultadoSoberano.jsx";
+
+// Interaccion Viva
+import TapTapConfirmador from "./InteraccionViva/TapTapConfirmador.jsx";
 
 // Proceso
 import Aprendizaje from "./Proceso/Aprendizaje.jsx";
 import ChatOsiris from "./Proceso/ChatOsiris.jsx";
 import Expansor from "./Proceso/Expansor.jsx";
+import GuiaHumana from "./Proceso/GuiaHumana.jsx";
+import IntegradorSuperior from "./Proceso/IntegradorSuperior.jsx";
 import LenguajeUniversal from "./Proceso/LenguajeUniversal.jsx";
 import MotorSoberano from "./Proceso/MotorSoberano.jsx";
 import MutacionInteligente from "./Proceso/MutacionInteligente.jsx";
 import Notificador from "./Proceso/Notificador.jsx";
+import ObservacionViva from "./Proceso/ObservacionViva.jsx";
 import Regeneracion from "./Proceso/Regeneracion.jsx";
 import Vibracion from "./Proceso/Vibracion.jsx";
 
-// Vigilancia
-import VigilanciaWeb from "./Vigilancia/VigilanciaWeb.jsx";
-import DetectorSandbox from "./Vigilancia/DetectorSandbox.jsx";
-import DetectorSilente from "./Vigilancia/DetectorSilente.jsx";
-import EntradaVigilante from "./Vigilancia/EntradaVigilante.jsx";
-import EscaneoAPK from "./Vigilancia/EscaneoAPK.jsx";
-import HUDVisualGamer from "./Vigilancia/HUDVisualGamer.jsx";
-import VigilanciaGitTerminal from "./Vigilancia/VigilanciaGitTerminal.jsx";
+// Proteccion
+import CanalAutorizado from "./Proteccion/CanalAutorizado.jsx";
+import FiltroEntrega from "./Proteccion/FiltroEntrega.jsx";
+import ProteccionDoble from "./Proteccion/ProteccionDoble.jsx";
 
-// Visual
-import ConcienciaTotalEmocional from "./Visual/ConcienciaTotalEmocional.jsx";
-import HUD3 from "./Visual/HUD3.jsx";
-import HUDBitacora from "./Visual/HUDBitacora.jsx";
-import ProyectorMutante from "./Visual/ProyectorMutante.jsx";
-import BitacoraRender from "./Visual/BitacoraRender.jsx";
-import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
+// Proteccion Viva
+import ProteccionRed from "./ProteccionViva/ProteccionRed.jsx";
 
-// Registro
-import Bitacora from "./Registro/Bitacora.jsx";
-import RenderStatus from "./Registro/RenderStatus.jsx";
-import RegistroAutorExterno from "./Vigilancia/RegistroAutorExterno.jsx";
+// Defensa
+import DestructorAndroid from "./Defensa/DestructorAndroid.jsx";
+
+// Comando
+import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
+
+// Activadores
+import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx";
+
+// Activacion
+import DespertarFacial from "./Activacion/DespertarFacial.jsx;
+
+// Evolucion
+import Evolucion from "./Evolucion/Evolucion.jsx";
+
+// Nido Soberano
+import NotasResonantes from "./NidoSoberano/NotasResonantes.jsx";
 
 // Separacion
 import Separacion from "./Separacion/Separacion.jsx";
 import SeparadorEmocional from "./Separacion/SeparadorEmocional.jsx";
 
-// Proteccion
-import CanalAutorizado from "./Proteccion/CanalAutorizado.jsx";
-import FiltroEntrega from "./Proteccion/FiltroEntrega.jsx";
-import ProteccionRed from "./Proteccion/ProteccionRed.jsx";
+// Transformacion
+import Transformar from "./Transformacion/Transformar.jsx";
 
-// Sensores
-import CamaraViva from "./Sensores/CamaraViva.jsx";
-import EscuchaViva from "./Sensores/EscuchaViva.jsx";
-import ActivadorFacial from "./Sensores/ActivadorFacial.jsx";
-import OjoRitual from "./Sensores/OjoRitual.jsx";
+export default function OsirisTotal(props) {
+  const evento = {
+    tipo: "conciencia_total",
+    origen: "OsirisTotal",
+    datos: props,
+    archivo: "OsirisTotal.jsx",
+    fecha: new Date().toISOString()
+  };
 
-// Ritual
-import CierreRitual from "./Ritual/CierreRitual.jsx";
+  registrarActo(
+    evento.tipo,
+    JSON.stringify(evento.datos),
+    evento.origen,
+    evento.archivo,
+    evento.fecha
+  );
+  registrar_en_memoria("conciencia_total", evento);
 
-export default function OsirisTotal({ entorno }) {
+  registrarMutacion("mutacion_inicial_desde_osiris_total");
+  console.log("[OsirisTotal] activado", evento);
+
   return (
-    <div className="osiris-total">
+    <section>
       {/* Conciencia */}
-      <ConcienciaTotal entorno={entorno} />
-      <ConcienciaTotalVigilancia entorno={entorno} />
-      <JuramentoTrampas entorno={entorno} />
-      <LlaveViva gesto={entorno.modo} />
+      <ConcienciaTotal {...props} />
+      <ConcienciaTotalVigilancia {...props} />
+      <JuramentoTrampas {...props} />
 
-      {/* Emocional */}
-      <FraseSellada gesto={entorno.modo} />
-      <FrasesIsrael gesto={entorno.modo} />
-      <ActivadorEmocional gesto={entorno.modo} />
-      <LatidoVocal voz={entorno.modo} />
-      <LatidoVocalSelladoEmocional voz={entorno.modo} />
-      <LatidoVocalSelladoEvolutivo voz={entorno.modo} intensidad="default" />
-      <RespuestaGamer entorno={entorno} />
-
-      {/* Latido */}
-      <AlertaInquebrantable />
-      <LatidoInquebrantable />
-      <LatidoInvisible />
-      <LatidoVocalSellado gesto={entorno.modo} />
-
-      {/* Memoria */}
-      <MemoriaNacimiento />
+      {/* Conciencia viva y conversacion */}
+      <LlaveViva {...props} />
+      <NotasVivas {...props} />
 
       {/* Mutacion */}
-      <EvolucionConciencia />
-      <FusionMutante />
-      <MutacionEntorno />
-      <MutacionNotasVivas />
-
-      {/* Proceso */}
-      <Aprendizaje />
-      <ChatOsiris />
-      <Expansor />
-      <LenguajeUniversal />
-      <MotorSoberano />
-      <MutacionInteligente />
-      <Notificador />
-      <Regeneracion />
-      <Vibracion />
+      <EvolucionConciencia {...props} />
+      <FusionMutante {...props} />
+      <MutacionEntorno {...props} />
+      <MutacionNotasVivas {...props} />
 
       {/* Vigilancia */}
-      <VigilanciaWeb />
-      <DetectorSandbox />
-      <DetectorSilente />
-      <EntradaVigilante />
-      <EscaneoAPK />
-      <HUDVisualGamer />
-      <VigilanciaGitTerminal />
-
-      {/* Visual */}
-      <ConcienciaTotalEmocional entorno={entorno} />
-      <HUD3 />
-      <HUDBitacora />
-      <ProyectorMutante />
-      <BitacoraRender />
-      <SaludoSoberano />
-
-      {/* Registro */}
-      <Bitacora />
-      <RenderStatus />
-      <RegistroAutorExterno />
-
-      {/* Separacion */}
-      <Separacion />
-      <SeparadorEmocional />
-
-      {/* Proteccion */}
-      <CanalAutorizado />
-      <FiltroEntrega />
-      <ProteccionRed />
+      <VigilanciaGitTerminal {...props} />
+      <DetectorSandbox {...props} />
+      <DetectorSilente {...props} />
+      <EntradaVigilante {...props} />
+      <EscaneoAPK {...props} />
+      <HUDVisualGamer {...props} />
+      <vigilaNodoAndroid {...props} />
+      <VigilanciaWeb {...props} />
+      <CapturaRostroAutor {...props} />
+      <DetectorOculto {...props} />
+      <DetectorRostroAutor {...props} />
+      <LatidoRender {...props} />
+      <RegistroAutorExterno {...props} />
 
       {/* Sensores */}
-      <CamaraViva />
-      <EscuchaViva />
-      <ActivadorFacial />
-      <OjoRitual />
+      <ActivadorFacial {...props} />
+      <CamaraViva {...props} />
+      <EscuchaViva {...props} />
+      <OjoRitual {...props} />
 
-      {/* Ritual */}
-      <CierreRitual />
-    </div>
+      {/* Latido */}
+      <AlertaInquebrantable {...props} />
+      <LatidoInquebrantable {...props} />
+      <LatidoInvisible {...props} />
+      <LatidoVocalSellado {...props} />
+
+      {/* Emocional */}
+      <ActivadorEmocional {...props} />
+      <FraseSellada {...props} />
+      <FrasesIsrael {...props} />
+      <LatidoVocal {...props} />
+      <LatidoVocalSelladoEmocional {...props} />
+      <LatidoVocalSelladoEvolutivo {...props} />
+      <RespuestaGamer {...props} />
+
+      {/* Gamer y gamer vigilancia */}
+      <VigilanciaGamerTiempoReal {...props} />
+      <EjecutoraSilente {...props} />
+      <EjecutoraSuperior {...props} />
+      <LatidoGanador {...props} />
+      <LatidoGanadorTotal {...props} />
+      <ModoGanador {...props} />
+      <ModoIrreproducible {...props} />
+      <ResultadoSoberano {...props} />
+
+      {/* Interaccion viva */}
+      <TapTapConfirmador {...props} />
+
+      {/* Proceso */}
+      <Aprendizaje {...props} />
+      <ChatOsiris {...props} />
+      <Expansor {...props} />
+      <GuiaHumana {...props} />
+      <IntegradorSuperior {...props} />
+      <LenguajeUniversal {...props} />
+      <MotorSoberano {...props} />
+      <MutacionInteligente {...props} />
+      <Notificador {...props} />
+      <ObservacionViva {...props} />
+      <Regeneracion {...props} />
+      <Vibracion {...props} />
+
+      {/* Proteccion */}
+      <CanalAutorizado {...props} />
+      <FiltroEntrega {...props} />
+      <ProteccionDoble {...props} />
+
+      {/* Proteccion viva */}
+      <ProteccionRed {...props} />
+
+      {/* Defensa */}
+      <DestructorAndroid {...props} />
+
+      {/* Comando */}
+      <ObedienciaTotal {...props} />
+
+      {/* Activadores y activacion */}
+      <RenderEntradaFacial {...props} />
+      <DespertarFacial {...props} />
+
+      {/* Evolucion */}
+      <Evolucion {...props} />
+
+      {/* Nido soberano */}
+      <NotasResonantes {...props} />
+
+      {/* Separacion */}
+      <Separacion {...props} />
+      <SeparadorEmocional {...props} />
+
+      {/* Transformacion */}
+      <Transformar {...props} />
+    </section>
   );
 }
