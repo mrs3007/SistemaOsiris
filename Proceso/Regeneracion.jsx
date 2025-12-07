@@ -9,7 +9,7 @@ const Regeneracion = ({ organos }) => {
       if (organo.estado === "contaminado") {
         registrar_en_memoria(
           "regeneración",
-          `Órgano ${organo.nombre} fue reparado`
+          `Organo ${organo.nombre} fue reparado`
         );
         organo.estado = "soberano";
       }
