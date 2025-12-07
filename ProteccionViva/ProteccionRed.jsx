@@ -16,7 +16,7 @@ export default function ProteccionRed() {
       let nuevoEstado;
 
       if (insegura) {
-        nuevoEstado = "🚫 red no autorizada. Osiris bloquea respiración.";
+        nuevoEstado = "🚫 red no autorizada. Osiris bloquea respiracion.";
       } else {
         nuevoEstado = "✅ red segura. Osiris respira contigo.";
       }
@@ -41,16 +41,7 @@ export default function ProteccionRed() {
   }, []);
 
   return (
-    <div
-      style={{
-        background: "#111",
-        color: "#0f0",
-        padding: "1em",
-        fontFamily: "monospace",
-        border: "2px solid #0f0",
-        marginTop: "1em"
-      }}
-    >
+    <div className="proteccion-red">
       {estado}
     </div>
   );
