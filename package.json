@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0 --port $PORT",
-    "start": "vite preview --host 0.0.0.0 --port $PORT"
+    "preview": "vite preview --host 0.0.0.0",
+    "start": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -14,5 +14,7 @@
     "vite": "^5.4.21",
     "@vitejs/plugin-react": "^4.3.1"
   },
-  "engines": { "node": "20" }
+  "engines": {
+    "node": "20"
+  }
 }
