@@ -106,7 +106,7 @@ import ObedienciaTotal from "./Comando/ObedienciaTotal.jsx";
 import RenderEntradaFacial from "./Activadores/RenderEntradaFacial.jsx";
 
 // Activacion
-import DespertarFacial from "./Activacion/DespertarFacial.jsx;
+import DespertarFacial from "./Activacion/DespertarFacial.jsx";
 
 // Evolucion
 import Evolucion from "./Evolucion/Evolucion.jsx";
@@ -195,7 +195,7 @@ export default function OsirisTotal(props) {
       <LatidoVocalSelladoEvolutivo {...props} />
       <RespuestaGamer {...props} />
 
-      {/* Gamer y gamer vigilancia */}
+            {/* Gamer y gamer vigilancia */}
       <VigilanciaGamerTiempoReal {...props} />
       <EjecutoraSilente {...props} />
       <EjecutoraSuperior {...props} />
