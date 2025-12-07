@@ -1,0 +1,54 @@
+{
+  "build": {
+    "command": "npm install && npm run build"
+  },
+  "start": {
+    "command": "npm run preview"
+  },
+  "watchPaths": [
+    "src/App.jsx",
+    "main.jsx",
+    "index.jsx",
+    "index.html",
+    "package.json",
+    "vite.config.js",
+    "Render.json",
+    "Latido/**",
+    "Memoria/**",
+    "Mutacion/**",
+    "NidoSoberano/**",
+    "Proceso/**",
+    "Proteccion/**",
+    "Proyeccion/**",
+    "Pruebas/**",
+    "Registro/**",
+    "Render/**",
+    "Ritual/**",
+    "Sensores/**",
+    "Separacion/**",
+    "Transformacion/**",
+    "Verificacion/**",
+    "Vigilancia/**",
+    "Visual/**",
+    "scripts/**",
+    "Activacion/**",
+    "Activadores/**",
+    "Comando/**",
+    "Conciencia/**",
+    "ConcienciaViva/**",
+    "Conversacion/**",
+    "Defensa/**",
+    "Emocional/**"
+  ],
+  "teardown": {
+    "enabled": true,
+    "overlapSeconds": 20,
+    "drainingSeconds": 10
+  },
+  "healthcheck": {
+    "path": "/"
+  },
+  "serverless": {
+    "enabled": false
+  }
+}
