@@ -2,17 +2,23 @@
   "name": "sistema-osiris",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0",
-    "start": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0 --port $PORT",
+    "start": "vite preview --host 0.0.0.0 --port $PORT",
+    "lint": "eslint . --ext .js,.jsx"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
     "vite": "^5.4.21",
-    "@vitejs/plugin-react": "^4.3.1"
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.34.0"
   },
   "engines": {
     "node": "20"
