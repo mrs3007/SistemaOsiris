@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import OsirisTotal from "../OsirisTotal.jsx";
 import OsirisTotalVision from "../OsirisTotalVision.jsx";
