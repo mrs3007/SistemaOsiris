@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './src/App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./src/App.jsx";
 
 function BannerCI() {
   return (
     <div style={{
-      backgroundColor: '#ff4d4f',
-      color: '#fff',
-      padding: '0.5rem',
-      textAlign: 'center'
+      backgroundColor: "#ff4d4f",
+      color: "#fff",
+      padding: "0.5rem",
+      textAlign: "center"
     }}>
       🚧 CI/CD Deployment — Sistema Osiris 🚧
     </div>
-  )
+  );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BannerCI />
     <App />
   </React.StrictMode>
-)
+);
