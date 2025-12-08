@@ -1,11 +1,9 @@
-// index.jsx (raíz)
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./src/App.jsx";
 
 console.log("Osiris: inicio de montaje");
 
-// ErrorBoundary de clase (React no ofrece uno funcional por defecto)
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
