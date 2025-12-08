@@ -3,3 +3,4 @@ import "./index.jsx";
 
 // Inicialización soberana de Osiris
 console.log("Sistema Osiris inicializado desde main.jsx");
+
