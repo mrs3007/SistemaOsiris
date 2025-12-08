@@ -1,7 +1,10 @@
 // SistemaOsiris/Visual/HUDVisualGamer.jsx
-// Órgano soberano de proyección HUD Gamer
-// Muestra mensajes rituales flotantes en pantalla con coordenadas y estilo marcado
+// Organo soberano HUD Gamer fusionado: proyeccion flotante + componente React
+// Permite mostrar mensajes efimeros en pantalla y renderizar bloques persistentes de vigilancia
 
+import React from "react";
+
+// Funcion para proyeccion flotante
 export const proyectarHUD = ({ mensaje, coordenada = { x: 50, y: 50 }, color = "#0ff" }) => {
   const hud = document.createElement("div");
   hud.innerText = mensaje;
@@ -22,3 +25,21 @@ export const proyectarHUD = ({ mensaje, coordenada = { x: 50, y: 50 }, color = "
 
   setTimeout(() => hud.remove(), 3000);
 };
+
+// Componente React para vigilancia persistente
+export default function HUDVisualGamer({ estado, mensaje }) {
+  const color = estado === "alerta" ? "#ff0044" : "#00ff88";
+  return (
+    <div style={{
+      backgroundColor: "#000",
+      color,
+      padding: "1rem",
+      fontFamily: "monospace",
+      border: `2px solid ${color}`,
+      borderRadius: "8px"
+    }}>
+      <h2>HUD Visual Gamer</h2>
+      <p>{mensaje}</p>
+    </div>
+  );
+}
