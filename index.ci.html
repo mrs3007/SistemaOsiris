@@ -1,13 +1,23 @@
-<!-- index.ci.html -->
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Osiris CI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <div id="root">ci-ready</div>
-    <script src="/dist/assets/index.js"></script>
-  </body>
-</html>
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './src/App.jsx'
+
+function BannerCI() {
+  return (
+    <div style={{
+      backgroundColor: '#ff4d4f',
+      color: '#fff',
+      padding: '0.5rem',
+      textAlign: 'center'
+    }}>
+      🚧 CI/CD Deployment — Sistema Osiris 🚧
+    </div>
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BannerCI />
+    <App />
+  </React.StrictMode>
+)
