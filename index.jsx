@@ -41,3 +41,4 @@ if (rootElement) {
 } else {
   console.error("⚠️ No se encontró el elemento #root en index.html");
 }
+
