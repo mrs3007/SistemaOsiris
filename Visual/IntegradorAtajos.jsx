@@ -1,15 +1,15 @@
-// SistemaOsiris/Integracion/IntegradorAtajos.jsx
+// SistemaOsiris/Visual/IntegradorAtajos.jsx
 // Organo soberano de integracion con Atajos de iOS
 // Simula y confirma la conexion con Osiris, registra en Bitacora y Memoria, y proyecta estado ritual.
 
 import React, { useEffect, useState } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
-import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
+import { proyectarHUD } from "./HUDVisualGamer.jsx";  // ✅ Ruta correcta: Visual
 
 // Funcion soberana de entrega de informacion (para LlaveViva.jsx)
 export function entregarInformacion() {
-  const mensaje = "📡 Información entregada desde IntegradorAtajos hacia Osiris";
+  const mensaje = "📡 Informacion entregada desde IntegradorAtajos hacia Osiris";
   
   const registro = {
     tipo: "entrega_informacion",
