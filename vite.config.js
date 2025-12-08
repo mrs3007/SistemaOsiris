@@ -8,12 +8,11 @@ export default defineConfig({
     charset: "utf8" // fuerza UTF-8 para acentos y caracteres especiales
   },
   server: {
-    host: "0.0.0.0",
-    port: process.env.PORT // Render/Railway ya definen PORT automáticamente
+    host: "0.0.0.0",        // Render exige escuchar en todas las interfaces
+    port: process.env.PORT  // Render asigna dinámicamente el puerto
   },
   preview: {
     host: "0.0.0.0",
-    port: process.env.PORT,
-    allowedHosts: ["sistemaosiris-4m3y.onrender.com"]
+    port: process.env.PORT
   }
 });
