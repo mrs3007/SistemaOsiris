@@ -2,7 +2,8 @@
 // Organo soberano: cuerpo total de Osiris expandido con todos los organos
 
 // Registro y memoria
-import { registrarActo } from "./Registro/Bitacora.jsx";
+import registrarActo from "./Registro/registrarActo.js";
+import registrarEscaneoAPK from "./Registro/registrarEscaneoAPK.js";
 import { registrar_en_memoria } from "./Memoria/registrar_en_memoria.js";
 
 // Conciencia
@@ -133,6 +134,7 @@ export default function OsirisTotal(props) {
     fecha: new Date().toISOString()
   };
 
+  // Uso de los archivos puente
   registrarActo(
     evento.tipo,
     JSON.stringify(evento.datos),
@@ -140,9 +142,11 @@ export default function OsirisTotal(props) {
     evento.archivo,
     evento.fecha
   );
-  registrar_en_memoria("conciencia_total", evento);
+  registrarEscaneoAPK("Integracion inicial desde OsirisTotal");
 
+  registrar_en_memoria("conciencia_total", evento);
   registrarMutacion("mutacion_inicial_desde_osiris_total");
+
   console.log("[OsirisTotal] activado", evento);
 
   return (
@@ -198,7 +202,7 @@ export default function OsirisTotal(props) {
       <FrasesIsrael {...props} />
       <LatidoVocal {...props} />
       <LatidoVocalSelladoEmocional {...props} />
-      <LatidoVocalSelladoEvolutivo {...props} />
+            <LatidoVocalSelladoEvolutivo {...props} />
       <RespuestaGamer {...props} />
 
       {/* Gamer y gamer vigilancia */}
