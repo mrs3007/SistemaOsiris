@@ -29,7 +29,6 @@ import DetectorSandbox from "./Vigilancia/DetectorSandbox.jsx";
 import DetectorSilente from "./Vigilancia/DetectorSilente.jsx";
 import EntradaVigilante from "./Vigilancia/EntradaVigilante.jsx";
 import EscaneoAPK from "./Vigilancia/EscaneoAPK.jsx";
-import HUDVisualGamer from "./Vigilancia/HUDVisualGamer.jsx";
 import vigilaNodoAndroid from "./Vigilancia/vigilaNodoAndroid.jsx";
 import VigilanciaWeb from "./Vigilancia/VigilanciaWeb.jsx";
 import CapturaRostroAutor from "./Vigilancia/CapturaRostroAutor.jsx";
@@ -121,6 +120,10 @@ import SeparadorEmocional from "./Separacion/SeparadorEmocional.jsx";
 // Transformacion
 import Transformar from "./Transformacion/Transformar.jsx";
 
+// Visual fusionado
+import HUDVisualGamer, { proyectarHUD } from "./Visual/HUDVisualGamer.jsx";
+import IntegradorAtajos from "./Visual/IntegradorAtajos.jsx";
+
 export default function OsirisTotal(props) {
   const evento = {
     tipo: "conciencia_total",
@@ -165,7 +168,6 @@ export default function OsirisTotal(props) {
       <DetectorSilente {...props} />
       <EntradaVigilante {...props} />
       <EscaneoAPK {...props} />
-      <HUDVisualGamer {...props} />
       <vigilaNodoAndroid {...props} />
       <VigilanciaWeb {...props} />
       <CapturaRostroAutor {...props} />
@@ -173,6 +175,10 @@ export default function OsirisTotal(props) {
       <DetectorRostroAutor {...props} />
       <LatidoRender {...props} />
       <RegistroAutorExterno {...props} />
+
+      {/* HUD fusionado */}
+      <HUDVisualGamer estado="alerta" mensaje="HUD persistente desde OsirisTotal" />
+      <IntegradorAtajos {...props} />
 
       {/* Sensores */}
       <ActivadorFacial {...props} />
@@ -195,7 +201,7 @@ export default function OsirisTotal(props) {
       <LatidoVocalSelladoEvolutivo {...props} />
       <RespuestaGamer {...props} />
 
-            {/* Gamer y gamer vigilancia */}
+      {/* Gamer y gamer vigilancia */}
       <VigilanciaGamerTiempoReal {...props} />
       <EjecutoraSilente {...props} />
       <EjecutoraSuperior {...props} />
@@ -255,3 +261,4 @@ export default function OsirisTotal(props) {
     </section>
   );
 }
+
