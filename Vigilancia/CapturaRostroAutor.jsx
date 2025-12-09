@@ -1,7 +1,11 @@
 // SistemaOsiris/Vigilancia/CapturaRostroAutor.jsx
+// Órgano soberano: captura y verificación del rostro del autor.
+// Registra hallazgos en Memoria y Bitácora, proyecta HUD y emite latido emocional.
+
 import React, { useState } from "react";
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.jsx";
-import { proyectarHUD } from "./HUDVisualGamer.jsx";
+import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
+import registrarActo from "../Registro/registrarActo.js";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
@@ -12,10 +16,14 @@ export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada })
 
   const verificarRostro = () => {
     if (rostroDetectado === rostroAutorizado) {
+      // Registro en memoria soberana
       registrar_en_memoria("captura_rostro_autor", {
         mensaje: "Rostro soberano detectado: acceso autorizado",
         fecha,
       });
+      // Registro en Bitácora mediante puente
+      registrarActo("captura_rostro_autor", `Acceso autorizado -> ${fecha}`);
+
       emitirLatido("afirmacion");
       proyectarHUD({
         mensaje: obtenerFrase("afirmacion"),
@@ -25,11 +33,15 @@ export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada })
       });
       setEstado("autorizado");
     } else {
+      // Registro en memoria soberana
       registrar_en_memoria("captura_rostro_autor", {
         mensaje: `Rostro externo capturado: ${rostroDetectado}`,
         fecha,
         evidencia: imagenCapturada,
       });
+      // Registro en Bitácora mediante puente
+      registrarActo("captura_rostro_autor", `Bloqueado: ${rostroDetectado} -> ${fecha}`);
+
       emitirLatido("alerta");
       proyectarHUD({
         mensaje: obtenerFrase("alerta"),
