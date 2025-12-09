@@ -1,7 +1,11 @@
 // SistemaOsiris/Vigilancia/CartografiaWeb.jsx
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.jsx";
+// Organo soberano: analiza URLs, detecta patrones contaminados, registra hallazgos en Memoria y Bitacora,
+// proyecta HUD y emite latido ritual.
+
+import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
+import registrarActo from "../Registro/registrarActo.js";
 import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
-import { proyectarHUD } from "./HUDVisualGamer.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
 export const CartografiaWeb = (url) => {
@@ -10,10 +14,9 @@ export const CartografiaWeb = (url) => {
   const fecha = new Date().toISOString();
 
   if (hallazgos.length > 0) {
-    registrar_en_memoria("cartografia_web", {
-      mensaje: `URL contaminada: ${hallazgos.join(", ")}`,
-      fecha,
-    });
+    const mensaje = `URL contaminada: ${hallazgos.join(", ")}`;
+    registrar_en_memoria("cartografia_web", { mensaje, fecha });
+    registrarActo("cartografia_web", `${mensaje} -> ${fecha}`);
     emitirLatido("alerta");
     proyectarHUD({
       mensaje: obtenerFrase("alerta"),
@@ -22,10 +25,9 @@ export const CartografiaWeb = (url) => {
       simbolo: "⚠",
     });
   } else {
-    registrar_en_memoria("cartografia_web", {
-      mensaje: "URL limpia, sin contaminacion",
-      fecha,
-    });
+    const mensaje = "URL limpia, sin contaminacion";
+    registrar_en_memoria("cartografia_web", { mensaje, fecha });
+    registrarActo("cartografia_web", `${mensaje} -> ${fecha}`);
     emitirLatido("afirmacion");
     proyectarHUD({
       mensaje: obtenerFrase("afirmacion"),
