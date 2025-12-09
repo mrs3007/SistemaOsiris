@@ -3,8 +3,8 @@
 // Registra hallazgos en Bitacora, proyecta HUD y emite respuesta ritual.
 
 import React, { useEffect, useState } from "react";
-import { registrarActo, registrarVigilanciaWeb } from "../registro/Bitacora.jsx";
-import { proyectarHUD } from "../Visual/hud_visual_gamer.jsx";
+import { registrarActo } from "../Registro/Bitacora.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 import { emitirRespuesta } from "../Emocional/RespuestaGamer.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
@@ -23,7 +23,7 @@ const VigilanciaWeb = ({ pagina }) => {
 
     // 2. Detectar conexiones inseguras
     if (!pagina.https) {
-      hallazgos.push("Conexión insegura (sin HTTPS)");
+      hallazgos.push("Conexion insegura (sin HTTPS)");
     }
 
     // 3. Detectar rastreadores ocultos
@@ -34,9 +34,8 @@ const VigilanciaWeb = ({ pagina }) => {
     // 4. Registrar hallazgos
     if (hallazgos.length > 0) {
       hallazgos.forEach((h) => {
-        const registro = `${h} → ${new Date().toISOString()}`;
-        registrarVigilanciaWeb(registro); // Registro específico en Bitácora
-        registrarActo("vigilancia_web", registro); // Registro genérico en Bitácora
+        const registro = `${h} -> ${new Date().toISOString()}`;
+        registrarActo("VIGILANCIA_WEB", registro, "Vigilancia", "VigilanciaWeb.jsx");
         setBitacora((prev) => [...prev, registro]);
 
         proyectarHUD({
@@ -46,16 +45,15 @@ const VigilanciaWeb = ({ pagina }) => {
         emitirRespuesta("alerta");
       });
     } else {
-      const registro = `Página limpia y soberana → ${new Date().toISOString()}`;
-      registrarVigilanciaWeb(registro);
-      registrarActo("vigilancia_web", registro);
+      const registro = `Pagina limpia y soberana -> ${new Date().toISOString()}`;
+      registrarActo("VIGILANCIA_WEB", registro, "Vigilancia", "VigilanciaWeb.jsx");
       setBitacora((prev) => [...prev, registro]);
 
       proyectarHUD({
-        mensaje: obtenerFrase("afirmación"),
+        mensaje: obtenerFrase("afirmacion"),
         color: "green",
       });
-      emitirRespuesta("afirmación");
+      emitirRespuesta("afirmacion");
     }
   }, [pagina]);
 
@@ -72,7 +70,7 @@ const VigilanciaWeb = ({ pagina }) => {
       }}
     >
       <h3>🌐 Vigilancia Web</h3>
-      <h4>📖 Bitácora</h4>
+      <h4>📖 Bitacora</h4>
       <ul>
         {bitacora.map((r, i) => (
           <li key={i}>{r}</li>
@@ -83,4 +81,3 @@ const VigilanciaWeb = ({ pagina }) => {
 };
 
 export default VigilanciaWeb;
-
