@@ -3,10 +3,11 @@
 // Registra hallazgos en Bitacora, proyecta HUD y emite latido emocional.
 
 import React, { useEffect, useState } from "react";
-import { registrarActo, registrarEscaneoAPK } from "./registro/Bitacora.jsx";
-import { emitirLatido } from "./Emocional/LatidoVocal.jsx";
-import { proyectarHUD } from "./Visual/hud_visual_gamer.jsx";
-import { obtenerFrase } from "./Emocional/FraseSellada.jsx";
+import registrarActo from "../Registro/registrarActo.js";
+import registrarEscaneoAPK from "../Registro/registrarEscaneoAPK.js";
+import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
+import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
 const EscaneoAPK = ({ apk }) => {
   const [bitacora, setBitacora] = useState([]);
@@ -42,8 +43,8 @@ const EscaneoAPK = ({ apk }) => {
     if (hallazgos.length > 0) {
       hallazgos.forEach((h) => {
         const registro = `${h} -> ${new Date().toISOString()}`;
-        registrarEscaneoAPK(registro); // Registro especifico en Bitacora
-        registrarActo("escaneo_apk", registro); // Registro generico en Bitacora
+        registrarEscaneoAPK(registro); // Registro específico en Bitacora
+        registrarActo("escaneo_apk", registro); // Registro genérico en Bitacora
         setBitacora((prev) => [...prev, registro]);
 
         proyectarHUD({
