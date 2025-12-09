@@ -1,10 +1,12 @@
-// DetectorSandbox.jsx — Organo soberano de vigilancia de entornos sandbox
+// SistemaOsiris/Vigilancia/DetectorSandbox.jsx
+// Organo soberano de vigilancia de entornos sandbox
 // Detecta permisos, firmas y origen sospechoso en APKs, registra hallazgos en Bitacora,
 // proyecta HUD y emite respuesta ritual.
 
 import React, { useEffect, useState } from "react";
-import { registrarActo, registrarEscaneoAPK } from "../registro/Bitacora.jsx";
-import { proyectarHUD } from "../Visual/hud_visual_gamer.jsx";
+import registrarActo from "../Registro/registrarActo.js";
+import registrarEscaneoAPK from "../Registro/registrarEscaneoAPK.js";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 import { emitirRespuesta } from "../Emocional/RespuestaGamer.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
@@ -57,7 +59,7 @@ const DetectorSandbox = ({ apk }) => {
         marginTop: "1em",
       }}
     >
-      <h3>🛡️ Detector Sandbox</h3>
+      <h3>🛡 Detector Sandbox</h3>
       <h4>📖 Bitacora</h4>
       <ul>
         {bitacora.map((r, i) => (
