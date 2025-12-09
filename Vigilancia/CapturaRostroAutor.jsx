@@ -1,6 +1,6 @@
 // SistemaOsiris/Vigilancia/CapturaRostroAutor.jsx
-// Órgano soberano: captura y verificación del rostro del autor.
-// Registra hallazgos en Memoria y Bitácora, proyecta HUD y emite latido emocional.
+// Organo soberano: captura y verificacion del rostro del autor.
+// Registra hallazgos en Memoria y Bitacora, proyecta HUD y emite latido emocional.
 
 import React, { useState } from "react";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
@@ -12,7 +12,7 @@ import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada }) {
   const [estado, setEstado] = useState("vigilando");
   const fecha = new Date().toISOString();
-  const rostroAutorizado = "Dayana"; // tu patrón soberano
+  const rostroAutorizado = "Dayana"; // patron soberano
 
   const verificarRostro = () => {
     if (rostroDetectado === rostroAutorizado) {
@@ -21,7 +21,7 @@ export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada })
         mensaje: "Rostro soberano detectado: acceso autorizado",
         fecha,
       });
-      // Registro en Bitácora mediante puente
+      // Registro en Bitacora mediante puente
       registrarActo("captura_rostro_autor", `Acceso autorizado -> ${fecha}`);
 
       emitirLatido("afirmacion");
@@ -39,7 +39,7 @@ export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada })
         fecha,
         evidencia: imagenCapturada,
       });
-      // Registro en Bitácora mediante puente
+      // Registro en Bitacora mediante puente
       registrarActo("captura_rostro_autor", `Bloqueado: ${rostroDetectado} -> ${fecha}`);
 
       emitirLatido("alerta");
@@ -48,7 +48,7 @@ export default function CapturaRostroAutor({ rostroDetectado, imagenCapturada })
         coordenada: { x: 120, y: 60 },
         color: "red",
         simbolo: "⚠",
-        imagen: imagenCapturada, // proyección de la fotografía del autor
+        imagen: imagenCapturada, // proyeccion de la fotografia del autor
       });
       setEstado("bloqueado");
     }
