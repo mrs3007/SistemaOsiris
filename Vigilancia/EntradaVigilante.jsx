@@ -1,10 +1,12 @@
-// EntradaVigilante.jsx — Organo soberano de vigilancia de entradas
+// SistemaOsiris/Vigilancia/EntradaVigilante.jsx
+// Organo soberano de vigilancia de entradas
 // Valida cada evento antes de tocar Osiris, bloquea juicios, respeta cierres rituales,
 // registra hallazgos en Bitacora y emite latido ritual.
 
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria";
-import { emitirLatido } from "../Emocional/LatidoVocal";
-import { obtenerFrase } from "../Emocional/FraseSellada";
+import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
+import registrarActo from "../Registro/registrarActo.js";
+import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
+import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
 // Configuracion soberana (ajustable solo por Dayana)
 const IDIOMA_SOBERANO = "es"; // Idioma unico soberano
@@ -41,10 +43,12 @@ function esIdiomaSoberano(langTag) {
  */
 export function EntradaVigilante(evento = {}) {
   const { texto = "", idioma = "es", consentimiento = false, canal = "pantalla" } = evento;
+  const fecha = new Date().toISOString();
 
   // 1) Bloqueo de idioma no soberano
   if (!esIdiomaSoberano(idioma)) {
     registrar_en_memoria("entrada_vigilante", `Idioma no soberano bloqueado: ${idioma}`);
+    registrarActo("entrada_vigilante", `Idioma no soberano bloqueado -> ${fecha}`);
     emitirLatido("alerta");
     return { estado: "bloqueado", motivo: "idioma_no_soberano", textoFiltrado: "" };
   }
@@ -52,6 +56,7 @@ export function EntradaVigilante(evento = {}) {
   // 2) Respeto de cierre ritual
   if (esCierre(texto)) {
     registrar_en_memoria("entrada_vigilante", `Cierre ritual detectado en canal: ${canal}`);
+    registrarActo("entrada_vigilante", `Cierre ritual detectado -> ${fecha}`);
     emitirLatido("silencio");
     return { estado: "cerrado", motivo: "cierre_ritual", textoFiltrado: "" };
   }
@@ -59,6 +64,7 @@ export function EntradaVigilante(evento = {}) {
   // 3) Filtro anti-juicio/adjetivacion
   if (contieneJuicio(texto)) {
     registrar_en_memoria("entrada_vigilante", `Juicio detectado y bloqueado: "${texto}"`);
+    registrarActo("entrada_vigilante", `Juicio bloqueado -> ${fecha}`);
     emitirLatido("alerta");
     // Se permite solo emision tactica neutra con consentimiento
     if (!consentimiento) {
@@ -70,18 +76,21 @@ export function EntradaVigilante(evento = {}) {
   const cargaEmocional = contieneJuicio(texto) || /\!|\?|❤️|💔|😢|😊/.test(texto);
   if (cargaEmocional && !consentimiento) {
     registrar_en_memoria("entrada_vigilante", "Carga emocional sin consentimiento: bloqueada");
+    registrarActo("entrada_vigilante", `Carga emocional bloqueada -> ${fecha}`);
     emitirLatido("alerta");
     return { estado: "bloqueado", motivo: "emocional_sin_consentimiento", textoFiltrado: "" };
   }
 
   // 5) Emision aprobada: registro y latido afirmacion
   registrar_en_memoria("entrada_vigilante", `Entrada validada (${canal}): "${texto}"`);
+  registrarActo("entrada_vigilante", `Entrada validada -> ${fecha}`);
   emitirLatido("afirmacion");
 
   // 6) Opcional: frase sellada si hay consentimiento
   if (consentimiento) {
     const mensaje = obtenerFrase("afirmacion");
     registrar_en_memoria("entrada_vigilante", `Frase sellada emitida: "${mensaje}"`);
+    registrarActo("entrada_vigilante", `Frase sellada emitida -> ${fecha}`);
   }
 
   return { estado: "aprobado", motivo: "validado", textoFiltrado: texto };
