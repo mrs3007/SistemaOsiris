@@ -4,7 +4,7 @@
 import { registrarActo } from "../Registro/Bitacora.jsx";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
 import { escanearCamara } from "../Sensores/CamaraViva.jsx";
-import { entregarInformacion } from "../Integracion/IntegradorAtajos.jsx";
+import { entregarInformacion } from "../Visual/IntegradorAtajos.jsx";
 
 // Bitacora local en memoria viva
 const bitacora = [];
@@ -14,7 +14,7 @@ export const activarEntregaPorRostro = () => {
   const rostro = escanearCamara();
 
   if (!rostro) {
-    registrarEvento("No se detectó ningún rostro.");
+    registrarEvento("No se detecto ningun rostro.");
     return "Sin rostro detectado.";
   }
 
