@@ -1,10 +1,10 @@
 // DetectorSilente.jsx — Organo soberano de vigilancia de entornos simulados
-// Detecta señales de navegadores falsos o automatizados, registra hallazgos en Bitacora,
+// Detecta senales de navegadores falsos o automatizados, registra hallazgos en Bitacora,
 // proyecta HUD y emite latido ritual.
 
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria";
 import { emitirLatido } from "../Emocional/LatidoVocal";
-import { proyectarHUD } from "./HUDVisualGamer.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 
 export const DetectorSilente = () => {
   const senales = [
@@ -19,7 +19,7 @@ export const DetectorSilente = () => {
     registrar_en_memoria("cartografia_sandbox", "Entorno falso detectado");
     emitirLatido("alerta");
     proyectarHUD({
-      mensaje: "⚠️ Entorno simulado",
+      mensaje: "Entorno simulado",
       coordenada: { x: 50, y: 50 },
       color: "red"
     });
