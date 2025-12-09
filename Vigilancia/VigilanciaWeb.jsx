@@ -1,6 +1,6 @@
-// VigilanciaWeb.jsx — Órgano soberano de vigilancia de páginas web
+// VigilanciaWeb.jsx — Organo soberano de vigilancia de paginas web
 // Detecta scripts sospechosos, conexiones inseguras y rastreadores ocultos.
-// Registra hallazgos en Bitácora, proyecta HUD y emite respuesta ritual.
+// Registra hallazgos en Bitacora, proyecta HUD y emite respuesta ritual.
 
 import React, { useEffect, useState } from "react";
 import { registrarActo, registrarVigilanciaWeb } from "../registro/Bitacora.jsx";
@@ -83,3 +83,4 @@ const VigilanciaWeb = ({ pagina }) => {
 };
 
 export default VigilanciaWeb;
+
