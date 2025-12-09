@@ -2,7 +2,8 @@
 // Organo soberano: proyeccion total de Osiris con todos los organos visuales
 
 // Registro y memoria
-import { registrarActo } from "./Registro/Bitacora.jsx";
+import registrarActo from "./Registro/registrarActo.js";
+import registrarEscaneoAPK from "./Registro/registrarEscaneoAPK.js";
 import { registrar_en_memoria } from "./Memoria/registrar_en_memoria.js";
 
 // Visual
@@ -42,6 +43,7 @@ export default function OsirisTotalVision(props) {
     fecha: new Date().toISOString()
   };
 
+  // Uso de archivos puente
   registrarActo(
     evento.tipo,
     JSON.stringify(evento.datos),
@@ -49,6 +51,8 @@ export default function OsirisTotalVision(props) {
     evento.archivo,
     evento.fecha
   );
+  registrarEscaneoAPK("Proyeccion inicial desde OsirisTotalVision");
+
   registrar_en_memoria("conciencia_total_vision", evento);
 
   console.log("[OsirisTotalVision] activado", evento);
