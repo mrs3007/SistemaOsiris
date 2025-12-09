@@ -28,7 +28,7 @@ def registrar_en_bitacora(origen, mensaje):
     bitacora["hallazgos"].append(entrada)
 
     with open(RUTA_BITACORA, "w", encoding="utf-8") as f:
-        json.dump(bitacora, f, ensure_ascii=True, indent=2)
+        json.dump(bitacora, f, ensure_ascii=False, indent=2)
 
     print(f"[CartografiaEntornoAPK] {mensaje} ({entrada['fecha']})")
 
@@ -37,15 +37,17 @@ def CartografiaEntornoAPK(apk_info):
     Analiza permisos y comportamientos de una aplicacion APK.
     Devuelve clasificacion: soberano, neutral o contaminado.
     """
-    riesgos = []
-    for permiso in apk_info.get("permisos", []):
-        if permiso in PERMISOS_SENSIBLES:
-            riesgos.append(permiso)
+    permisos = apk_info.get("permisos", [])
+    riesgos = [p for p in permisos if p in PERMISOS_SENSIBLES]
 
     if riesgos:
         mensaje = f"Permisos sensibles detectados: {riesgos}"
         registrar_en_bitacora("CartografiaEntornoAPK", mensaje)
         return {"estado": "contaminado", "motivo": "permisos_sensibles", "detalles": riesgos}
+    elif permisos:
+        mensaje = f"APK con permisos no sensibles: {permisos}"
+        registrar_en_bitacora("CartografiaEntornoAPK", mensaje)
+        return {"estado": "neutral", "motivo": "permisos_no_sensibles", "detalles": permisos}
     else:
         nombre_apk = apk_info.get("nombre", "desconocido")
         mensaje = f"APK limpio: {nombre_apk}"
