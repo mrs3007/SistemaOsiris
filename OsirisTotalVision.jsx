@@ -19,7 +19,7 @@ import ProyectorMutante from "./Visual/ProyectorMutante.jsx";
 import ProyectorVisual from "./Visual/ProyectorVisual.jsx";
 import SaludoSoberano from "./Visual/SaludoSoberano.jsx";
 import Testigo from "./Visual/Testigo.jsx";
-import hud_visual_gamer from "./Visual/hud_visual_gamer.jsx";
+import HUDVisualGamer, { proyectarHUD } from "./Visual/HUDVisualGamer.jsx";
 
 // Proyeccion
 import GeneradorVisual from "./Proyeccion/GeneradorVisual.jsx";
@@ -81,7 +81,9 @@ export default function OsirisTotalVision(props) {
       <ProyectorMutante {...props} />
       <ProyectorVisual {...props} />
       <Testigo {...props} />
-      <hud_visual_gamer {...props} />
+
+      {/* HUD fusionado */}
+      <HUDVisualGamer estado="alerta" mensaje="HUD persistente desde OsirisTotalVision" />
     </section>
   );
 }
