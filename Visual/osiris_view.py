@@ -1,5 +1,5 @@
 // SistemaOsiris/Visual/OsirisView.jsx
-// Órgano soberano de vista total de Osiris
+// Organo soberano de vista total de Osiris
 // Integra HUD, frases emocionales y mensajes vivos en una sola proyección ritual
 
 import React from "react";
