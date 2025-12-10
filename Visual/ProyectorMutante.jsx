@@ -1,5 +1,5 @@
 // SistemaOsiris/Visual/ProyectorMutante.jsx
-// Órgano soberano de mutación visual
+// Organo soberano de mutación visual
 // Proyecta símbolos rituales según el estado marcado, registra en Bitácora y emite proyección en HUD.
 
 import { registrarActo, registrarMutacionVisual } from "../Registro/Bitacora.jsx";
