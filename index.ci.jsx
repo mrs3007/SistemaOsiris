@@ -3,7 +3,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./src/App.jsx";
+import AppCI from "./src/AppCI.jsx";
 
 function BannerCI() {
   return (
@@ -26,7 +26,7 @@ if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <BannerCI />
-      <App />
+      <AppCI />
     </React.StrictMode>
   );
   console.log("Osiris: montaje CI/CD completado");
