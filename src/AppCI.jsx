@@ -33,4 +33,21 @@ export default function AppCI() {
         color: "#4B0082",
         minHeight: "100vh",
         padding: "2rem",
-        fontFamily
+        fontFamily: "serif",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>🌌 Sistema Osiris (CI/CD)</h1>
+      <p style={{ textAlign: "center", color: "#ff4d4f", fontWeight: "bold" }}>
+        🚧 Este es un despliegue de prueba — CI/CD 🚧
+      </p>
+
+      <SafeSection title="⚙️ Núcleo Osiris">
+        <OsirisTotal />
+      </SafeSection>
+
+      <SafeSection title="🪞 Proyección Osiris">
+        <OsirisTotalVision />
+      </SafeSection>
+    </div>
+  );
+}
