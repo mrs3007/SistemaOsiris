@@ -1,6 +1,6 @@
 // SistemaOsiris/Visual/Testigo.jsx
 // Organo soberano de testimonio visual
-// Envía eventos como testigos al backend para inscribirlos en Osiris.db
+// Envia eventos como testigos al backend para inscribirlos en Osiris.db
 
 export const proyectarTestigo = async (evento) => {
   const testigo = {
