@@ -1,6 +1,6 @@
-// Puente inicial: importa index.jsx y asegura inicialización
+// main.jsx
+// Puente inicial: importa index.jsx y asegura inicializacion
 import "./index.jsx";
 
-// Inicialización soberana de Osiris
+// Inicializacion soberana de Osiris
 console.log("Sistema Osiris inicializado desde main.jsx");
-
