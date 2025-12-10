@@ -1,4 +1,4 @@
-// src/SistemaOsiris/Emocional/ActivadorEmocional.jsx
+//SistemaOsiris/Emocional/ActivadorEmocional.jsx
 
 import frases from "./frases_rituales.json";
 import { registrarActo } from "../Registro/Bitacora.jsx";
