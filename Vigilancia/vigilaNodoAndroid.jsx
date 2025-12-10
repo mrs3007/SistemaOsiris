@@ -1,4 +1,4 @@
-// SistemaOsiris/SistemaOsiris/Vigilancia/vigilaNodoAndroid.jsx
+// SistemaOsiris/Vigilancia/vigilaNodoAndroid.jsx
 // Órgano de vigilancia para entorno Android — detecta procesos, permisos y señales de alteración
 
 import React, { useEffect, useState } from "react";
