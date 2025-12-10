@@ -1,3 +1,7 @@
+// src/App.jsx
+// Organo raiz de Sistema Osiris
+// Renderiza el altar vivo con OsirisTotal y OsirisTotalVision
+
 import React from "react";
 import OsirisTotal from "../OsirisTotal.jsx";
 import OsirisTotalVision from "../OsirisTotalVision.jsx";
@@ -11,11 +15,11 @@ function SafeSection({ title, children }) {
       </section>
     );
   } catch (e) {
-    console.error(`⚠️ Falla en seccion: ${title}`, e);
+    console.error("⚠️ Falla en seccion:", title, e);
     return (
       <section style={{ marginBottom: "2rem", color: "#ff4d4f" }}>
         <h2>{title}</h2>
-        <p>Falla en esta sección. Revisa consola.</p>
+        <p>Falla en esta seccion. Revisa consola.</p>
       </section>
     );
   }
@@ -34,11 +38,11 @@ export default function App() {
     >
       <h1 style={{ textAlign: "center" }}>🌌 Sistema Osiris</h1>
 
-      <SafeSection title="⚙️ Núcleo Osiris">
+      <SafeSection title="⚙️ Nucleo Osiris">
         <OsirisTotal />
       </SafeSection>
 
-      <SafeSection title="🪞 Proyección Osiris">
+      <SafeSection title="🪞 Proyeccion Osiris">
         <OsirisTotalVision />
       </SafeSection>
     </div>
