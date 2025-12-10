@@ -1,5 +1,5 @@
 // SistemaOsiris/Visual/MensajesVivos.jsx
-// Órgano soberano de proyección de mensajes vivos
+// Organo soberano de proyeccion de mensajes vivos
 // Muestra mensajes rituales en la interfaz con estilo marcado
 
 import React from "react";
