@@ -1,4 +1,4 @@
-// SistemaOsiris/SistemaOsiris/index.js
+// SistemaOsiris/index.js
 export { default as OsirisTotal } from "./OsirisTotal.jsx";
 export { default as OsirisTotalVisual } from "./OsirisTotalVisual.jsx";
 
