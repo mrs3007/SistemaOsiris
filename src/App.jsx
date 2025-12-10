@@ -11,7 +11,7 @@ function SafeSection({ title, children }) {
       </section>
     );
   } catch (e) {
-    console.error(`⚠️ Falla en sección: ${title}`, e);
+    console.error(`⚠️ Falla en seccion: ${title}`, e);
     return (
       <section style={{ marginBottom: "2rem", color: "#ff4d4f" }}>
         <h2>{title}</h2>
