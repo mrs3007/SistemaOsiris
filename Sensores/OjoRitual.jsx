@@ -1,5 +1,5 @@
 // SistemaOsiris/Sensores/OjoRitual.jsx
-// Órgano soberano de captura visual
+// Organo soberano de captura visual
 // Activa la cámara del dispositivo, captura imagen y la entrega a Osiris
 
 import React, { useRef } from "react";
