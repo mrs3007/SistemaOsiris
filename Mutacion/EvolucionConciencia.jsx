@@ -1,5 +1,5 @@
 // SistemaOsiris/Mutacion/EvolucionConciencia.jsx
-// Órgano soberano de expansión de conciencia
+// Organo soberano de expansion de conciencia
 // Registra cada acción marcada por Dayana en BitacoraMutacion.json
 
 import Bitacora from "../Registro/Bitacora.jsx";
