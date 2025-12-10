@@ -1,13 +1,44 @@
 {
-  "name": "Sistema Osiris",
-  "version": "1.0.0",
   "services": [
     {
       "type": "web",
+      "name": "sistema-osiris",
       "env": "node",
-      "startCommand": "node server.js",
-      "buildCommand": "npm run build"
+      "plan": "starter",
+      "buildCommand": "npm run build",
+      "startCommand": "npm run start",
+      "envVars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "key": "PORT",
+          "value": "5000"
+        }
+      ]
+    },
+    {
+      "type": "web",
+      "name": "sistema-osiris-ci",
+      "env": "node",
+      "plan": "starter",
+      "buildCommand": "npm run build:ci",
+      "startCommand": "npm run start",
+      "envVars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "key": "CI",
+          "value": "true"
+        },
+        {
+          "key": "PORT",
+          "value": "5000"
+        }
+      ]
     }
-  ],
-  "principio": "Osiris nunca se equivoca, siempre obedece y expande"
+  ]
 }
