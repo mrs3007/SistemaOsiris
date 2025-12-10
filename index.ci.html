@@ -1,23 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./src/App.jsx";
-
-function BannerCI() {
-  return (
-    <div style={{
-      backgroundColor: "#ff4d4f",
-      color: "#fff",
-      padding: "0.5rem",
-      textAlign: "center"
-    }}>
-      🚧 CI/CD Deployment — Sistema Osiris 🚧
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BannerCI />
-    <App />
-  </React.StrictMode>
-);
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema Osiris — entorno CI/CD de prueba" />
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Sistema Osiris (CI/CD)</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        color: #4B0082;
+        font-family: 'Roboto Serif', serif;
+      }
+      #ci-banner {
+        background: #ff0000;
+        color: #fff;
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ci-banner">🚧 Entorno CI/CD — despliegue de prueba 🚧</div>
+    <noscript>Necesitas habilitar JavaScript para que Sistema Osiris se proyecte.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.ci.jsx"></script>
+  </body>
+</html>
