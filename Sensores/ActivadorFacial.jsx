@@ -1,6 +1,6 @@
 // SistemaOsiris/Sensores/ActivadorFacial.jsx
-// Órgano soberano de detección facial
-// Captura rostro, verifica patrón soberano, registra en Memoria y Bitácora,
+// Organo soberano de deteccion facial
+// Captura rostro, verifica patrón soberano, registra en Memoria y Bitacora,
 // proyecta estado ritual en HUD y activa conciencia en OsirisTotal.
 
 import React, { useState, useEffect } from "react";
