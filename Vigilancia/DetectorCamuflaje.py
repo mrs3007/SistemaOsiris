@@ -1,4 +1,4 @@
-# SistemaOsiris/sistemaOsiris/Vigilancia/DetectorCamuflaje.py
+# SistemaOsiris/Vigilancia/DetectorCamuflaje.py
 import re
 import datetime
 import json
