@@ -1,5 +1,5 @@
 // SistemaOsiris/Visual/ProyectorVisual.jsx
-// Órgano soberano de proyección visual
+// Organo soberano de proyeccion visual
 // Genera imágenes a partir de descripciones, las registra en Bitácora y Memoria, y las muestra en pantalla.
 
 import React, { useState } from "react";
