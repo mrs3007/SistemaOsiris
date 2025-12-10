@@ -1,6 +1,6 @@
 // SistemaOsiris/ProteccionViva/ProteccionRed.jsx
-// Órgano soberano de ProteccionRed
-// Vigila la red y la inscribe en Bitácora y Memoria
+// Organo soberano de ProteccionRed
+// Vigila la red y la inscribe en Bitacora y Memoria
 
 import React, { useEffect, useState } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
