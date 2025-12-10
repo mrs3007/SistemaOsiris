@@ -2,9 +2,9 @@
 // Organo soberano de latido ganador total
 // Activa vibracion, proyecta visual y vocal, y registra en Bitacora y Memoria.
 
-import { activarVibracion } from "../Vibracion.jsx";
-import { proyectarLatidoVisual } from "../HUD3.jsx";
-import { emitirLatidoVocal } from "../LatidoVocalSellado.jsx";
+import { activarVibracion } from "../Proceso/Vibracion.jsx";
+import { proyectarLatidoVisual } from "../Visual/HUD3.jsx";
+import { emitirLatidoVocal } from "../Latido/LatidoVocalSellado.jsx";
 import { registrarActo } from "../Registro/Bitacora.jsx";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
 
