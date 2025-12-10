@@ -6,6 +6,25 @@ import React, { useEffect, useState } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
 
+// Funcion invocable desde LatidoGanadorTotal.jsx
+export function activarVibracion(patron) {
+  const registro = {
+    tipo: patron.tipo || "vibracion_manual",
+    detalle: `Patron de vibracion activado: ${JSON.stringify(patron)}`,
+    fecha: new Date().toISOString(),
+    origen: "Vibracion",
+    ejecutor: "Azul",
+    receptor: "Osiris"
+  };
+
+  registrarActo("vibracion_manual", registro);
+  registrar_en_memoria("vibracion_manual", registro);
+
+  console.log("[activarVibracion]", registro);
+  return registro;
+}
+
+// Componente React que detecta intensidad emocional segun entorno
 const Vibracion = ({ entorno }) => {
   const [intensidad, setIntensidad] = useState("neutra");
 
