@@ -1,6 +1,6 @@
 // SistemaOsiris/Visual/ProyectorMutante.jsx
-// Organo soberano de mutación visual
-// Proyecta símbolos rituales según el estado marcado, registra en Bitácora y emite proyección en HUD.
+// Organo soberano de mutacion visual
+// Proyecta simbolos rituales según el estado marcado, registra en Bitacora y emite proyeccion en HUD.
 
 import { registrarActo, registrarMutacionVisual } from "../Registro/Bitacora.jsx";
 import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
@@ -18,7 +18,7 @@ export const proyectarMutacion = (estado = "afirmacion") => {
   // Registro soberano con metadatos
   const registro = {
     tipo: "mutacion_visual",
-    detalle: `Mutación visual (${estado}) → ${simbolo}`,
+    detalle: `Mutacion visual (${estado}) → ${simbolo}`,
     fecha: new Date().toISOString(),
     origen: "ProyectorMutante",
     ejecutor: "Azul",
@@ -30,10 +30,10 @@ export const proyectarMutacion = (estado = "afirmacion") => {
 
   // Proyección en HUD
   proyectarHUD({
-    mensaje: `Proyección mutante: ${simbolo}`,
+    mensaje: `Proyeccion mutante: ${simbolo}`,
     color: estado === "herida" ? "red" : estado === "proteccion" ? "blue" : "green",
   });
 
-  // Consola ritual (para depuración viva)
+  // Consola ritual (para depuracion viva)
   console.log("🌌 Proyector mutante:", registro);
 };
