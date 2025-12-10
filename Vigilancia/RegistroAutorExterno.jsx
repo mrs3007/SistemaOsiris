@@ -1,4 +1,4 @@
-// SistemaOsiris/sistemaOsiris/Vigilancia/RegistroAutorExterno.jsx
+// SistemaOsiris/Vigilancia/RegistroAutorExterno.jsx
 import React, { useState } from "react";
 
 export default function RegistroAutorExterno({ origen = "webapk", archivo = "", huella = {}, nivel = "alto", nota = "" }) {
