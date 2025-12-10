@@ -6,17 +6,21 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install --legacy-peer-deps && npm run build",
   "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next"
       ],
       "settings": {
         "editor.formatOnSave": true,
         "files.eol": "\n"
       }
     }
-  }
+  },
+  "forwardPorts": [5000],
+  "remoteUser": "node"
 }
