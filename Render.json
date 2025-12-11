@@ -5,17 +5,11 @@
       "name": "sistema-osiris",
       "env": "node",
       "plan": "starter",
-      "buildCommand": "npm run build",
+      "buildCommand": "npm install --legacy-peer-deps && npx vite build",
       "startCommand": "npm run start",
       "envVars": [
-        {
-          "key": "NODE_ENV",
-          "value": "production"
-        },
-        {
-          "key": "PORT",
-          "value": "5000"
-        }
+        { "key": "NODE_ENV", "value": "production" },
+        { "key": "PORT", "value": "5000" }
       ]
     },
     {
@@ -23,21 +17,12 @@
       "name": "sistema-osiris-ci",
       "env": "node",
       "plan": "starter",
-      "buildCommand": "npm run build:ci",
+      "buildCommand": "npm install --legacy-peer-deps && npx vite build:ci",
       "startCommand": "npm run start",
       "envVars": [
-        {
-          "key": "NODE_ENV",
-          "value": "production"
-        },
-        {
-          "key": "CI",
-          "value": "true"
-        },
-        {
-          "key": "PORT",
-          "value": "5000"
-        }
+        { "key": "NODE_ENV", "value": "production" },
+        { "key": "CI", "value": "true" },
+        { "key": "PORT", "value": "5000" }
       ]
     }
   ]
