@@ -4,6 +4,9 @@ import { mutarDesdeNota } from "../Mutacion/MutacionNotasVivas.jsx";
 import { registrarActo } from "../Registro/Bitacora.jsx";
 import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
 
+// ✅ Importación agregada para conectar con ChatOsiris
+import { procesarMensajeDesdeFuera } from "../Proceso/ChatOsiris.jsx";
+
 let notas = [];
 
 export const inscribirNota = (contenido, tono = "soberano") => {
@@ -27,6 +30,9 @@ export const inscribirNota = (contenido, tono = "soberano") => {
 
   // Registro en Memoria
   registrar_en_memoria("nota_viva", nota);
+
+  // ✅ Conexión agregada: enviar mensaje a ChatOsiris
+  procesarMensajeDesdeFuera(contenido);
 
   // Confirmacion en consola
   console.log("[NotasVivas] Nota viva inscrita y enviada a mutacion:", contenido);
