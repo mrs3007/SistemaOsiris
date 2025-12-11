@@ -1,6 +1,6 @@
 // SistemaOsiris/Vigilancia/DetectorRostroAutor.jsx
 import React, { useState } from "react";
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.jsx";
+import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
 import { proyectarHUD } from "./HUDVisualGamer.jsx";
 import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
@@ -8,7 +8,7 @@ import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 export default function DetectorRostroAutor({ rostroDetectado, imagenAutor }) {
   const [estado, setEstado] = useState("vigilando");
   const fecha = new Date().toISOString();
-  const rostroAutorizado = "Dayana"; // tu patrón soberano
+  const rostroAutorizado = "Dayana"; // tu patron soberano
 
   const verificarRostro = () => {
     if (rostroDetectado === rostroAutorizado) {
