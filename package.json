@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:ci": "CI=true vite build",
+    "build": "npx vite build",
+    "build:ci": "CI=true npx vite build",
     "preview": "vite preview --port 5000",
     "start": "vite preview --port 5000 --host 0.0.0.0"
   },
