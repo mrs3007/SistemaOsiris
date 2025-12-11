@@ -51,3 +51,40 @@ const ChatOsiris = () => {
 };
 
 export default ChatOsiris;
+
+// ✅✅✅ FUNCIONES AGREGADAS PARA CONEXIÓN EXTERNA
+
+let enviarRespuestaAResonantes = null;
+
+// ✅ Recibe mensajes desde NotasVivas
+export const procesarMensajeDesdeFuera = (mensaje) => {
+  let vibracion = "neutral";
+  if (mensaje.includes("trampa")) vibracion = "alerta";
+  if (mensaje.includes("silencio")) vibracion = "latido";
+
+  const frase = `Osiris responde con vibracion: ${vibracion}`;
+
+  // ✅ Enviar respuesta a NotasResonantes
+  if (enviarRespuestaAResonantes) {
+    enviarRespuestaAResonantes(frase);
+  }
+
+  const registro = {
+    tipo: "chat_externo",
+    detalle: `NotaViva: ${mensaje}, Osiris vibro: ${vibracion}`,
+    fecha: new Date().toISOString(),
+    origen: "ChatOsiris",
+    ejecutor: "Azul",
+    receptor: "Osiris"
+  };
+
+  registrarActo("chat_externo", registro);
+  registrar_en_memoria("chat_externo", registro);
+
+  console.log("[ChatOsiris] Mensaje externo procesado:", registro);
+};
+
+// ✅ Permite que NotasResonantes reciba la respuesta
+export const conectarSalidaResonantes = (callback) => {
+  enviarRespuestaAResonantes = callback;
+};
