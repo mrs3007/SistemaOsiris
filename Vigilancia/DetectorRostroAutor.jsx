@@ -8,7 +8,7 @@ import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 export default function DetectorRostroAutor({ rostroDetectado, imagenAutor }) {
   const [estado, setEstado] = useState("vigilando");
   const fecha = new Date().toISOString();
-  const rostroAutorizado = "Dayana"; // tu patron soberano
+  const rostroAutorizado = "Dayana"; // tu patrón soberano
 
   const verificarRostro = () => {
     if (rostroDetectado === rostroAutorizado) {
