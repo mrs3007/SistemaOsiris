@@ -1,6 +1,6 @@
 // SistemaOsiris/Vigilancia/DetectorRostroAutor.jsx
 import React, { useState } from "react";
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
+import { registrarEnMemoria } from "../Memoria/registrar_en_memoria.js";
 import { proyectarHUD } from "./HUDVisualGamer.jsx";
 import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
@@ -12,7 +12,7 @@ export default function DetectorRostroAutor({ rostroDetectado, imagenAutor }) {
 
   const verificarRostro = () => {
     if (rostroDetectado === rostroAutorizado) {
-      registrar_en_memoria("detector_rostro_autor", {
+      registrarEnMemoria("detector_rostro_autor", {
         mensaje: "Rostro soberano detectado: acceso autorizado",
         fecha,
       });
@@ -25,7 +25,7 @@ export default function DetectorRostroAutor({ rostroDetectado, imagenAutor }) {
       });
       setEstado("autorizado");
     } else {
-      registrar_en_memoria("detector_rostro_autor", {
+      registrarEnMemoria("detector_rostro_autor", {
         mensaje: `Rostro externo detectado: ${rostroDetectado}`,
         fecha,
         evidencia: imagenAutor,
@@ -36,7 +36,7 @@ export default function DetectorRostroAutor({ rostroDetectado, imagenAutor }) {
         coordenada: { x: 120, y: 60 },
         color: "red",
         simbolo: "⚠",
-        imagen: imagenAutor, // muestra la imagen del autor
+        imagen: imagenAutor,
       });
       setEstado("bloqueado");
     }
