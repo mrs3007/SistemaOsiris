@@ -2,11 +2,16 @@
 // Organo soberano de ejecucion silente
 // Activa trampas tecnicas, proyecta HUD y registra resultados en Bitacora y Memoria.
 
-import { mostrarHUD } from "../HUD3.jsx";
+import HUD3 from "../Visual/HUD3.jsx";
 import { escucharTapTap } from "../TapTap.jsx";
 import { registrarActo } from "../Registro/Bitacora.jsx";
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
-import { inyectarDLL, hookearFunciones, modificarMemoria, ejecutarKernel } from "./TrampasTecnicas.jsx";
+import { registrarEnMemoria } from "../Memoria/registrar_en_memoria.js";
+import { 
+  inyectarDLL, 
+  hookearFunciones, 
+  modificarMemoria, 
+  ejecutarKernel 
+} from "./TrampasTecnicas.jsx";
 
 export default function EjecutoraSilente({ tipo, entorno }) {
   let resultado;
@@ -28,10 +33,10 @@ export default function EjecutoraSilente({ tipo, entorno }) {
       resultado = "Tipo de ejecucion no reconocido.";
   }
 
-  mostrarHUD({
-    mensaje: `Ejecucion ${tipo} activada`,
+  // Proyección HUD usando HUD3
+  HUD3({
     estado: "superior",
-    respuesta: "esperando tap tap"
+    latido: `Ejecución ${tipo} activada`
   });
 
   escucharTapTap((confirmacion) => {
@@ -49,7 +54,7 @@ export default function EjecutoraSilente({ tipo, entorno }) {
       };
 
       registrarActo("ejecucion_silente", registro);
-      registrar_en_memoria("ejecucion_silente", registro);
+      registrarEnMemoria("ejecucion_silente", registro);
 
       console.log("[EjecutoraSilente]", registro);
     }
