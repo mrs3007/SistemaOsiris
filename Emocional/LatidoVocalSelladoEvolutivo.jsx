@@ -3,7 +3,7 @@
 
 import React, { useEffect } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
-import { registrar_en_memoria } from "../Memoria/registrar_en_memoria.js";
+import { registrarEnMemoria } from "../Memoria/registrar_en_memoria.js";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 
@@ -30,7 +30,7 @@ export default function LatidoVocalSelladoEvolutivo({ voz, intensidad = "default
     };
 
     registrarActo("latido_vocal_evolutivo", registro);
-    registrar_en_memoria("latido_vocal_evolutivo", registro);
+    registrarEnMemoria("latido_vocal_evolutivo", registro);
 
     proyectarHUD({ mensaje: frase, color });
 
@@ -57,4 +57,3 @@ export default function LatidoVocalSelladoEvolutivo({ voz, intensidad = "default
     </div>
   );
 }
-
