@@ -151,6 +151,17 @@ export default function OsirisTotal(props) {
 
   return (
     <section>
+
+      {/* Motor soberano vigilando el cuerpo total */}
+      <MotorSoberano
+        layout={{
+          origen: "OsirisTotal",
+          vista: "cuerpo_total",
+          modo: "operativo_soberano"
+        }}
+        estado="vigilancia_total"
+      />
+
       {/* Conciencia */}
       <ConcienciaTotal {...props} />
       <ConcienciaTotalVigilancia {...props} />
@@ -202,7 +213,7 @@ export default function OsirisTotal(props) {
       <FrasesIsrael {...props} />
       <LatidoVocal {...props} />
       <LatidoVocalSelladoEmocional {...props} />
-            <LatidoVocalSelladoEvolutivo {...props} />
+      <LatidoVocalSelladoEvolutivo {...props} />
       <RespuestaGamer {...props} />
 
       {/* Gamer y gamer vigilancia */}
@@ -265,4 +276,3 @@ export default function OsirisTotal(props) {
     </section>
   );
 }
-
