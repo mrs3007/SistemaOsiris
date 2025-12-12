@@ -1,7 +1,7 @@
 // SistemaOsiris/Vigilancia/DetectorRostroAutor.jsx
 import React, { useState } from "react";
 import { registrarEnMemoria } from "../Memoria/registrar_en_memoria.js";
-import { proyectarHUD } from "./HUDVisualGamer.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
 import { emitirLatido } from "../Emocional/LatidoVocal.jsx";
 import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
