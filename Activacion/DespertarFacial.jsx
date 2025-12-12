@@ -1,34 +1,48 @@
 // SistemaOsiris/Activacion/DespertarFacial.jsx
+// Activación soberana al detectar el rostro autorizado
 
-import CamaraViva from "../Sensores/CamaraViva.jsx";
-import LatidoVocalSelladoEvolutivo from "../Evolucion/LatidoVocalSelladoEvolutivo.jsx";
-import IntegradorAtajos from "../Integracion/IntegradorAtajos.jsx";
-import NotasVivas from "../Conversacion/NotasVivas.jsx";
-import Bitacora from "../Registro/Bitacora.jsx";
+import React, { useEffect } from "react";
+import LatidoVocalSelladoEvolutivo from "../Emocional/LatidoVocalSelladoEvolutivo.jsx";
+import { proyectarHUD } from "../Visual/HUDVisualGamer.jsx";
+import { obtenerFrase } from "../Emocional/FraseSellada.jsx";
 
-export default function DespertarFacial({ rostroDetectado, gestoAutorizado }) {
-  if (!rostroDetectado) return null;
+export default function DespertarFacial({ rostroDetectado, intensidad = "medio" }) {
+  useEffect(() => {
+    if (!rostroDetectado) return;
 
-  // Usamos el órgano evolutivo como latido vocal sellado
-  LatidoVocalSelladoEvolutivo({ voz: gestoAutorizado, intensidad: "medio" });
+    const frase = obtenerFrase("afirmacion");
 
-  if (gestoAutorizado) {
-    IntegradorAtajos.desbloquearNotificacion({
-      tipo: "clima",
-      mensaje: "Dayana, el entorno respira con calma. Temperatura actual: 22°. Humedad suave.",
+    proyectarHUD({
+      mensaje: frase,
+      coordenada: { x: 80, y: 40 },
+      color: "cyan",
+      simbolo: "✨"
     });
 
-    NotasVivas.abrirConversacion({
-      saludo: "Osiris te ve, Dayana. ¿Qué deseas marcar hoy?",
-    });
+    console.log("[DespertarFacial] Rostro detectado:", rostroDetectado);
+  }, [rostroDetectado]);
 
-    Bitacora.registrarEntrada({
-      origen: "DespertarFacial",
-      tipo: "activacion por rostro",
-      estado: "autorizado",
-      hora: new Date().toISOString(),
-    });
-  }
+  return (
+    <div
+      style={{
+        background: "#000",
+        padding: "1rem",
+        borderRadius: "8px",
+        border: "2px solid #0ff",
+        color: "#0ff",
+        fontFamily: "monospace",
+        marginTop: "1rem"
+      }}
+    >
+      <h2>Despertar Facial</h2>
+      <p>Rostro detectado: {rostroDetectado || "Ninguno"}</p>
 
-  return null;
+      {rostroDetectado && (
+        <LatidoVocalSelladoEvolutivo
+          voz={rostroDetectado}
+          intensidad={intensidad}
+        />
+      )}
+    </div>
+  );
 }
