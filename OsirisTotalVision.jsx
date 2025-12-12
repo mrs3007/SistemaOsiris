@@ -6,6 +6,9 @@ import registrarActo from "./Registro/registrarActo.js";
 import registrarEscaneoAPK from "./Registro/registrarEscaneoAPK.js";
 import { registrar_en_memoria } from "./Memoria/registrar_en_memoria.js";
 
+// Motor soberano
+import MotorSoberano from "./Proceso/MotorSoberano.jsx";
+
 // Visual
 import BitacoraCI from "./Visual/BitacoraCI.jsx";
 import BitacoraRender from "./Visual/BitacoraRender.jsx";
@@ -59,6 +62,17 @@ export default function OsirisTotalVision(props) {
 
   return (
     <section>
+
+      {/* Motor soberano vigilando toda la proyección */}
+      <MotorSoberano
+        layout={{
+          origen: "OsirisTotalVision",
+          vista: "vision_total",
+          modo: "observador_activo"
+        }}
+        estado="vigilancia_visual_total"
+      />
+
       {/* Principio y saludo soberano */}
       <PrincipioSoberano {...props} />
       <SaludoSoberano {...props} />
