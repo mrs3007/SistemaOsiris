@@ -1,4 +1,4 @@
-// SistemaOsiris/Vigilancia/BitacoraAislamientoKnox.jsx
+//Vigilancia/BitacoraAislamientoKnox.jsx
 import React, { useEffect, useState } from "react";
 import { registrarActo } from "../Registro/Bitacora.jsx";
 
